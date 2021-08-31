@@ -1,0 +1,24 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="1280" height="720">
+  <defs>
+    <!-- The gradients are much more pronounced in Chrome than IntelliJ preview -->
+    <linearGradient id="hills-gradient" gradientTransform="rotate(80)">
+      <stop offset="0%"  stop-color="#EEF7E9" />
+      <stop offset="10%"  stop-color="#DDECD2" />
+      <stop offset="50%"  stop-color="#C0E7A9" />
+      <stop offset="100%" stop-color="#ADD399" />
+    </linearGradient>
+    <linearGradient id="cloud-gradient" gradientTransform="rotate(90)">
+      <stop offset="5%"  stop-color="#B5D4D1" />
+      <stop offset="40%" stop-color="#B9D7D8" />
+      <stop offset="60%" stop-color="#B9D7D8" />
+      <stop offset="95%"  stop-color="#B5D4D1" />
+    </linearGradient>
+  </defs>
+  <rect fill="#95CDCF" x="0" y="0" width="100%" height="100%" />
+  <path fill="url(#hills-gradient)"
+        d="M350,720 C550,650 850,475 1350,525 L1280,720 Z" />
+  <path fill="url(#hills-gradient)"
+        d="M0,720 C-750,450 150,300 930,720 Z" />
+</svg>

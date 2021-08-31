@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>NBlocks</title>
+
+    <!-- favicon and launchers -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#E41C20">
+    <meta name="msapplication-TileColor" content="#2B5797">
+    <meta name="theme-color" content="#2B5797">
+
+    <!-- layout -->
+    <meta name=viewport content="width=device-width,initial-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <style type="text/css">
+    #app {
+      /* Full screen */
+      width: 100vw;
+      height: 100vh;
+      /* Set background before app loads */
+      background-image: url(/assets/background.svg);
+      background-size: cover;
+      background-position: center bottom;
+    }
+    body {
+      /* Remove padding before app loads */
+      margin: 0;
+      /* Prevent white padding on notched iPhones */
+      padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+      /* Prevent zooming on iOS 12+ */
+      touch-action: none;
+      /* Prevent text selection */
+      user-select: none;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
