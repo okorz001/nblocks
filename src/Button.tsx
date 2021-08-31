@@ -12,8 +12,8 @@ const buttonColor = Color('#2E8BC0')
 const useStyles = createUseStyles({
   button: {
     flex: 'none',
-    width: '40px',
-    height: '40px',
+    width: '50px',
+    height: '50px',
     margin: '5px',
 
     border: 'none',
@@ -45,7 +45,7 @@ const useStyles = createUseStyles({
   label: {
     color: 'white',
     fontFamily: 'inherit',
-    fontSize: '24px',
+    fontSize: '40px',
   },
 })
 
