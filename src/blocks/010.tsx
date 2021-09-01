@@ -9,7 +9,7 @@ export const TEN_COLORS = {
 export const TenBlock = createBlock(TEN_COLORS.primary)
 
 export const TEN: NBlock = {
-  number: 1,
+  number: 10,
   forms: [
     // tall
     {

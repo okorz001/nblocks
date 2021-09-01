@@ -2,12 +2,12 @@ import * as Color from 'color'
 import { createBlock } from './Block'
 import NBlock from './NBlock'
 
-import { OneBlock } from './One'
-import { TwoBlock } from './Two'
-import { ThreeBlock } from './Three'
-import { FourBlock } from './Four'
-import { FiveBlock } from './Five'
-import { SixBlock } from './Six'
+import { OneBlock } from './001'
+import { TwoBlock } from './002'
+import { ThreeBlock } from './003'
+import { FourBlock } from './004'
+import { FiveBlock } from './005'
+import { SixBlock } from './006'
 
 export const SEVEN_COLORS = {
   primary: new Color('#9768AC'),
@@ -16,7 +16,7 @@ export const SEVEN_COLORS = {
 export const SevenBlock = createBlock(SEVEN_COLORS.primary)
 
 export const SEVEN: NBlock = {
-  number: 3,
+  number: 7,
   forms: [
     // tall
     {

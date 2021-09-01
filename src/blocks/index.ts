@@ -1,15 +1,17 @@
 import NBlock from './NBlock'
 
-import ONE from './One'
-import TWO from './Two'
-import THREE from './Three'
-import FOUR from './Four'
-import FIVE from './Five'
-import SIX from './Six'
-import SEVEN from './Seven'
-import EIGHT from './Eight'
-import NINE from './Nine'
-import TEN from './Ten'
+import ONE from './001'
+import TWO from './002'
+import THREE from './003'
+import FOUR from './004'
+import FIVE from './005'
+import SIX from './006'
+import SEVEN from './007'
+import EIGHT from './008'
+import NINE from './009'
+import TEN from './010'
+import ELEVEN from './011'
+import TWELVE from './012'
 
 export const NBLOCKS: NBlock[] = [
   ONE,
@@ -22,6 +24,8 @@ export const NBLOCKS: NBlock[] = [
   EIGHT,
   NINE,
   TEN,
+  ELEVEN,
+  TWELVE,
 ]
 
 export default NBLOCKS
