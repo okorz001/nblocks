@@ -12,7 +12,7 @@ const useStyles = createUseStyles({
   gallery: {
     flex: 'auto',
     maxWidth: '500px',
-    height: `calc(100% - ${PADDING}px)`,
+    height: `calc(100% - ${2 * PADDING}px)`,
     padding: `${PADDING}px`,
     
     display: 'flex',
