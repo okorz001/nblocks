@@ -98,6 +98,22 @@ export const SEVEN: NBlock = {
         </svg>
       ),
     },
+    // top right
+    {
+      width: 400,
+      height: 400,
+      svg: () => (
+        <svg>
+          <SevenBlock x={0} y= {0} />
+          <SixBlock x={100} y= {0} />
+          <FiveBlock x={200} y= {0} />
+          <FourBlock x={300} y= {0} />
+          <ThreeBlock x={300} y= {100} />
+          <TwoBlock x={300} y= {200} />
+          <OneBlock x={300} y= {300} />
+        </svg>
+      ),
+    },
   ],
 }
 

@@ -47,6 +47,18 @@ export const THREE: NBlock = {
         </svg>
       ),
     },
+    // top right
+    {
+      width: 200,
+      height: 200,
+      svg: () => (
+        <svg>
+          <ThreeBlock x={0} y= {0} />
+          <ThreeBlock x={100} y= {0} />
+          <ThreeBlock x={100} y= {100} />
+        </svg>
+      ),
+    },
   ],
 }
 
