@@ -26,3 +26,6 @@ jobs:
           branch: gh-pages
           folder: dist
           single-commit: true
+          # This is the user that the GitHub web editor uses
+          git-config-name: GitHub
+          git-config-email: noreply@github.com
