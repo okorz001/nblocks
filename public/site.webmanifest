@@ -1,9 +1,10 @@
 {
   "name": "NBlocks",
   "short_name": "NBlocks",
+  "description": "Practice counting with colorful blocks and discover various ways to arrange them.",
   "scope": "/",
-  "start_url": "/index.html",
-  "display": "fullscreen",
+  "start_url": "/",
+  "display": "standalone",
   "orientation": "any",
   "theme_color": "#2B5797",
   "background_color": "#2B5797",
