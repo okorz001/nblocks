@@ -164,6 +164,57 @@ export const EIGHT: NBlock = {
         </svg>
       ),
     },
+    // +
+    {
+      width: 300,
+      height: 400,
+      svg: () => (
+        <svg>
+          <EightBlock x={100} y= {0} />
+          <EightBlock x={0} y= {100} />
+          <EightBlock x={100} y= {100} />
+          <EightBlock x={200} y= {100} />
+          <EightBlock x={0} y= {200} />
+          <EightBlock x={100} y= {200} />
+          <EightBlock x={200} y= {200} />
+          <EightBlock x={100} y= {300} />
+        </svg>
+      ),
+    },
+    // bolt
+    {
+      width: 200,
+      height: 700,
+      svg: () => (
+        <svg>
+          <EightBlock x={100} y= {0} />
+          <EightBlock x={100} y= {100} />
+          <EightBlock x={100} y= {200} />
+          <EightBlock x={100} y= {300} />
+          <EightBlock x={0} y= {300} />
+          <EightBlock x={0} y= {400} />
+          <EightBlock x={0} y= {500} />
+          <EightBlock x={0} y= {600} />
+        </svg>
+      ),
+    },
+    // zig zag
+    {
+      width: 400,
+      height: 500,
+      svg: () => (
+        <svg>
+          <EightBlock x={0} y= {0} />
+          <EightBlock x={0} y= {100} />
+          <EightBlock x={100} y= {100} />
+          <EightBlock x={100} y= {200} />
+          <EightBlock x={200} y= {200} />
+          <EightBlock x={200} y= {300} />
+          <EightBlock x={300} y= {300} />
+          <EightBlock x={300} y= {400} />
+        </svg>
+      ),
+    },
   ],
 }
 

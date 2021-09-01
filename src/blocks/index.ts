@@ -8,6 +8,7 @@ import FIVE from './Five'
 import SIX from './Six'
 import SEVEN from './Seven'
 import EIGHT from './Eight'
+import NINE from './Nine'
 
 export const NBLOCKS: NBlock[] = [
   ONE,
@@ -18,6 +19,7 @@ export const NBLOCKS: NBlock[] = [
   SIX,
   SEVEN,
   EIGHT,
+  NINE,
 ]
 
 export default NBLOCKS
