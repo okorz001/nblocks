@@ -4,10 +4,9 @@ import NBlock from './NBlock'
 
 export const FOUR_COLORS = {
   primary: new Color('#46CD2E'),
-  shadow: new Color('#259E1E'),
 }
 
-export const FourBlock = createBlock(FOUR_COLORS)
+export const FourBlock = createBlock(FOUR_COLORS.primary)
 
 export const FOUR: NBlock = {
   number: 4,

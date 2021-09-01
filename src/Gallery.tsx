@@ -7,11 +7,13 @@ interface GalleryProps {
   number: number,
 }
 
+const PADDING = 20
 const useStyles = createUseStyles({
   gallery: {
     flex: 'auto',
     maxWidth: '500px',
-    height: '100%',
+    height: `calc(100% - ${PADDING}px)`,
+    padding: `${PADDING}px`,
     
     display: 'flex',
     flexFlow: 'row nowrap',

@@ -4,10 +4,9 @@ import NBlock from './NBlock'
 
 export const FIVE_COLORS = {
   primary: new Color('#2AACC7'),
-  shadow: new Color('#2188A9'),
 }
 
-export const FiveBlock = createBlock(FIVE_COLORS)
+export const FiveBlock = createBlock(FIVE_COLORS.primary)
 
 export const FIVE: NBlock = {
   number: 5,
@@ -93,6 +92,48 @@ export const FIVE: NBlock = {
           <FiveBlock x={200} y= {0} />
           <FiveBlock x={100} y= {100} />
           <FiveBlock x={100} y= {200} />
+        </svg>
+      ),
+    },
+    // Z
+    {
+      width: 300,
+      height: 300,
+      svg: () => (
+        <svg>
+          <FiveBlock x={0} y= {0} />
+          <FiveBlock x={100} y= {0} />
+          <FiveBlock x={100} y= {100} />
+          <FiveBlock x={100} y= {200} />
+          <FiveBlock x={200} y= {200} />
+        </svg>
+      ),
+    },
+    // stampolines
+    {
+      width: 300,
+      height: 300,
+      svg: () => (
+        <svg>
+          <FiveBlock x={0} y= {100} />
+          <FiveBlock x={100} y= {0} />
+          <FiveBlock x={100} y= {100} />
+          <FiveBlock x={100} y= {200} />
+          <FiveBlock x={200} y= {0} />
+        </svg>
+      ),
+    },
+    // top right
+    {
+      width: 300,
+      height: 300,
+      svg: () => (
+        <svg>
+          <FiveBlock x={0} y= {0} />
+          <FiveBlock x={100} y= {0} />
+          <FiveBlock x={200} y= {0} />
+          <FiveBlock x={200} y= {100} />
+          <FiveBlock x={200} y= {200} />
         </svg>
       ),
     },
