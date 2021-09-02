@@ -5,14 +5,15 @@ interface SvgCanvasProps {
   y?: number,
   width: number,
   height: number,
+  scale?: number,
 }
 
 type SvgCanvasRules = 'canvas'
 
 const useStyles = createUseStyles<SvgCanvasRules, SvgCanvasProps>({
   canvas: {
-    maxWidth: props => props.width,
-    maxHeight: props => props.height,
+    maxWidth: props => (props.scale || 1) * props.width,
+    maxHeight: props => (props.scale || 1) * props.height,
     width: '100%',
     height: '100%',
   },

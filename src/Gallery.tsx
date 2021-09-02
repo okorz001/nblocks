@@ -39,7 +39,7 @@ const Gallery: React.FC<GalleryProps> = (props) => {
   const nextForm = () => setFormNumber((formNumber + 1) % nblock.forms.length)
   return (
     <div className={classes.gallery} onClick={nextForm}>
-      <SvgCanvas width={form.width} height={form.height}>
+      <SvgCanvas scale={0.5} width={form.width} height={form.height}>
         <form.svg />
       </SvgCanvas>
     </div>
