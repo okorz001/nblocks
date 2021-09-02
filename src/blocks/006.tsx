@@ -116,6 +116,21 @@ export const SIX: NBlock = {
         </svg>
       ),
     },
+    // upside down T
+    {
+      width: 400,
+      height: 200,
+      svg: () => (
+        <svg>
+          <SixBlock x={100} y= {0} />
+          <SixBlock x={200} y= {0} />
+          <SixBlock x={0} y= {100} />
+          <SixBlock x={100} y= {100} />
+          <SixBlock x={200} y= {100} />
+          <SixBlock x={300} y= {100} />
+        </svg>
+      ),
+    },
     // ??? scoop?
     {
       width: 300,
@@ -128,6 +143,21 @@ export const SIX: NBlock = {
           <SixBlock x={100} y= {200} />
           <SixBlock x={0} y= {200} />
           <SixBlock x={0} y= {300} />
+        </svg>
+      ),
+    },
+    // U
+    {
+      width: 400,
+      height: 200,
+      svg: () => (
+        <svg>
+          <SixBlock x={0} y= {0} />
+          <SixBlock x={300} y= {0} />
+          <SixBlock x={0} y= {100} />
+          <SixBlock x={100} y= {100} />
+          <SixBlock x={200} y= {100} />
+          <SixBlock x={300} y= {100} />
         </svg>
       ),
     },

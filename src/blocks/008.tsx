@@ -215,6 +215,23 @@ export const EIGHT: NBlock = {
         </svg>
       ),
     },
+    // ?
+    {
+      width: 300,
+      height: 550,
+      svg: () => (
+        <svg>
+          <EightBlock x={0} y= {0} />
+          <EightBlock x={100} y= {0} />
+          <EightBlock x={200} y= {0} />
+          <EightBlock x={200} y= {100} />
+          <EightBlock x={200} y= {200} />
+          <EightBlock x={100} y= {200} />
+          <EightBlock x={100} y= {300} />
+          <EightBlock x={100} y= {450} />
+        </svg>
+      ),
+    },
   ],
 }
 

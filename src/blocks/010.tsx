@@ -106,6 +106,139 @@ export const TEN: NBlock = {
         </svg>
       ),
     },
+    // 0
+    {
+      width: 300,
+      height: 400,
+      svg: () => (
+        <svg>
+          <TenBlock x={0} y= {0} />
+          <TenBlock x={0} y= {100} />
+          <TenBlock x={0} y= {200} />
+          <TenBlock x={0} y= {300} />
+          <TenBlock x={100} y= {0} />
+          <TenBlock x={100} y= {300} />
+          <TenBlock x={200} y= {0} />
+          <TenBlock x={200} y= {100} />
+          <TenBlock x={200} y= {200} />
+          <TenBlock x={200} y= {300} />
+        </svg>
+      ),
+    },
+    // lower left nub
+    {
+      width: 400,
+      height: 300,
+      svg: () => (
+        <svg>
+          <TenBlock x={0} y= {200} />
+          <TenBlock x={100} y= {0} />
+          <TenBlock x={100} y= {100} />
+          <TenBlock x={100} y= {200} />
+          <TenBlock x={200} y= {0} />
+          <TenBlock x={200} y= {100} />
+          <TenBlock x={200} y= {200} />
+          <TenBlock x={300} y= {0} />
+          <TenBlock x={300} y= {100} />
+          <TenBlock x={300} y= {200} />
+        </svg>
+      ),
+    },
+    // d
+    {
+      width: 300,
+      height: 400,
+      svg: () => (
+        <svg>
+          <TenBlock x={0} y= {200} />
+          <TenBlock x={0} y= {300} />
+          <TenBlock x={100} y= {0} />
+          <TenBlock x={100} y= {100} />
+          <TenBlock x={100} y= {200} />
+          <TenBlock x={100} y= {300} />
+          <TenBlock x={200} y= {0} />
+          <TenBlock x={200} y= {100} />
+          <TenBlock x={200} y= {200} />
+          <TenBlock x={200} y= {300} />
+        </svg>
+      ),
+    },
+    // fifteen's minute of fame
+    {
+      width: 400,
+      height: 400,
+      svg: () => (
+        <svg>
+          <TenBlock x={0} y= {0} />
+          <TenBlock x={100} y= {0} />
+          <TenBlock x={100} y= {100} />
+          <TenBlock x={100} y= {200} />
+          <TenBlock x={100} y= {300} />
+          <TenBlock x={200} y= {100} />
+          <TenBlock x={200} y= {200} />
+          <TenBlock x={200} y= {300} />
+          <TenBlock x={300} y= {200} />
+          <TenBlock x={300} y= {300} />
+        </svg>
+      ),
+    },
+    // cursive v
+    {
+      width: 500,
+      height: 400,
+      svg: () => (
+        <svg>
+          <TenBlock x={0} y= {100} />
+          <TenBlock x={100} y= {100} />
+          <TenBlock x={100} y= {200} />
+          <TenBlock x={100} y= {300} />
+          <TenBlock x={200} y= {300} />
+          <TenBlock x={300} y= {300} />
+          <TenBlock x={300} y= {200} />
+          <TenBlock x={300} y= {100} />
+          <TenBlock x={300} y= {0} />
+          <TenBlock x={400} y= {0} />
+        </svg>
+      ),
+    },
+    // n
+    {
+      width: 400,
+      height: 300,
+      svg: () => (
+        <svg>
+          <TenBlock x={0} y= {0} />
+          <TenBlock x={100} y= {0} />
+          <TenBlock x={200} y= {0} />
+          <TenBlock x={300} y= {0} />
+          <TenBlock x={0} y= {100} />
+          <TenBlock x={100} y= {100} />
+          <TenBlock x={200} y= {100} />
+          <TenBlock x={300} y= {100} />
+          <TenBlock x={0} y= {200} />
+          <TenBlock x={300} y= {200} />
+        </svg>
+      ),
+    },
+    // seahorse
+    {
+      width: 300,
+      height: 600,
+      svg: () => (
+        <svg>
+          <TenBlock x={0} y= {0} />
+          <TenBlock x={0} y= {100} />
+          <TenBlock x={0} y= {200} />
+          <TenBlock x={0} y= {300} />
+          <TenBlock x={100} y= {100} />
+          <TenBlock x={100} y= {200} />
+          <TenBlock x={100} y= {300} />
+          <TenBlock x={100} y= {400} />
+          <TenBlock x={100} y= {500} />
+          <TenBlock x={200} y= {100} />
+        </svg>
+      ),
+    },
   ],
 }
 

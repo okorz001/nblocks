@@ -12,6 +12,10 @@ import NINE from './009'
 import TEN from './010'
 import ELEVEN from './011'
 import TWELVE from './012'
+import THIRTEEN from './013'
+import FOURTEEN from './014'
+import FIFTEEN from './015'
+import SIXTEEN from './016'
 
 export const NBLOCKS: NBlock[] = [
   ONE,
@@ -26,6 +30,10 @@ export const NBLOCKS: NBlock[] = [
   TEN,
   ELEVEN,
   TWELVE,
+  THIRTEEN,
+  FOURTEEN,
+  FIFTEEN,
+  SIXTEEN,
 ]
 
 export default NBLOCKS
