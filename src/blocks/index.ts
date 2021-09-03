@@ -16,6 +16,10 @@ import THIRTEEN from './013'
 import FOURTEEN from './014'
 import FIFTEEN from './015'
 import SIXTEEN from './016'
+import SEVENTEEN from './017'
+import EIGHTEEN from './018'
+import NINETEEN from './019'
+import TWENTY from './020'
 
 export const NBLOCKS: NBlock[] = [
   ONE,
@@ -34,6 +38,10 @@ export const NBLOCKS: NBlock[] = [
   FOURTEEN,
   FIFTEEN,
   SIXTEEN,
+  SEVENTEEN,
+  EIGHTEEN,
+  NINETEEN,
+  TWENTY,
 ]
 
 export default NBLOCKS
