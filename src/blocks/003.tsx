@@ -5,8 +5,8 @@ export const THREE_COLORS = {
   primary: new Color('#E0CF16'),
 }
 
-export const ThreeBlock = createBlock(THREE_COLORS.primary)
-export const ThreeGrid = createGrid(ThreeBlock)
+export const ThreeBlock = createBlock('Three', THREE_COLORS.primary)
+export const ThreeGrid = createGrid('Three', ThreeBlock)
 
 export const THREE: NBlock = {
   number: 3,

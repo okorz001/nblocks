@@ -5,7 +5,7 @@ export const ONE_COLORS = {
   primary: new Color('#E41C20'),
 }
 
-export const OneBlock = createBlock(ONE_COLORS.primary)
+export const OneBlock = createBlock('One', ONE_COLORS.primary)
 
 export const ONE: NBlock = {
   number: 1,

@@ -5,8 +5,8 @@ export const FOUR_COLORS = {
   primary: new Color('#46CD2E'),
 }
 
-export const FourBlock = createBlock(FOUR_COLORS.primary)
-export const FourGrid = createGrid(FourBlock)
+export const FourBlock = createBlock('Four', FOUR_COLORS.primary)
+export const FourGrid = createGrid('Four', FourBlock)
 
 export const FOUR: NBlock = {
   number: 4,

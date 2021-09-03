@@ -5,8 +5,8 @@ export const TWO_COLORS = {
   primary: new Color('#E09025'),
 }
 
-export const TwoBlock = createBlock(TWO_COLORS.primary)
-export const TwoGrid = createGrid(TwoBlock)
+export const TwoBlock = createBlock('Two', TWO_COLORS.primary)
+export const TwoGrid = createGrid('Two', TwoBlock)
 
 export const TWO: NBlock = {
   number: 2,

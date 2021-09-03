@@ -7,14 +7,14 @@ export const NINE_COLORS = {
   light: new Color('#C4C8C9'),
 }
 
-export const NineDarkBlock = createBlock(NINE_COLORS.dark)
-export const NineDarkGrid = createGrid(NineDarkBlock)
+export const NineDarkBlock = createBlock('NineDark', NINE_COLORS.dark)
+export const NineDarkGrid = createGrid('NineDark', NineDarkBlock)
 
-export const NineMediumBlock = createBlock(NINE_COLORS.medium)
-export const NineMediumGrid = createGrid(NineMediumBlock)
+export const NineMediumBlock = createBlock('NineMedium', NINE_COLORS.medium)
+export const NineMediumGrid = createGrid('NineMedium', NineMediumBlock)
 
-export const NineLightBlock = createBlock(NINE_COLORS.light)
-export const NineLightGrid = createGrid(NineLightBlock)
+export const NineLightBlock = createBlock('NineLight', NINE_COLORS.light)
+export const NineLightGrid = createGrid('NineLight', NineLightBlock)
 
 export const NINE: NBlock = {
   number: 9,

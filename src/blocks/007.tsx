@@ -12,7 +12,7 @@ export const SEVEN_COLORS = {
   primary: new Color('#9768AC'),
 }
 
-export const SevenBlock = createBlock(SEVEN_COLORS.primary)
+export const SevenBlock = createBlock('Seven', SEVEN_COLORS.primary)
 
 export const SEVEN: NBlock = {
   number: 7,

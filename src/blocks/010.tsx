@@ -5,8 +5,8 @@ export const TEN_COLORS = {
   primary: new Color('#F0F0F0'),
 }
 
-export const TenBlock = createBlock(TEN_COLORS.primary)
-export const TenGrid = createGrid(TenBlock)
+export const TenBlock = createBlock('Ten', TEN_COLORS.primary)
+export const TenGrid = createGrid('Ten', TenBlock)
 
 export const TEN: NBlock = {
   number: 10,

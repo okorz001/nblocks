@@ -5,8 +5,8 @@ export const EIGHT_COLORS = {
   primary: new Color('#EB27A1'),
 }
 
-export const EightBlock = createBlock(EIGHT_COLORS.primary)
-export const EightGrid = createGrid(EightBlock)
+export const EightBlock = createBlock('Eight', EIGHT_COLORS.primary)
+export const EightGrid = createGrid('Eight', EightBlock)
 
 export const EIGHT: NBlock = {
   number: 8,

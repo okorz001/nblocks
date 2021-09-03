@@ -5,8 +5,8 @@ export const SIX_COLORS = {
   primary: new Color('#5829BD'),
 }
 
-export const SixBlock = createBlock(SIX_COLORS.primary)
-export const SixGrid = createGrid(SixBlock)
+export const SixBlock = createBlock('Six', SIX_COLORS.primary)
+export const SixGrid = createGrid('Six', SixBlock)
 
 export const SIX: NBlock = {
   number: 6,

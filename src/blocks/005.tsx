@@ -5,8 +5,8 @@ export const FIVE_COLORS = {
   primary: new Color('#2AACC7'),
 }
 
-export const FiveBlock = createBlock(FIVE_COLORS.primary)
-export const FiveGrid = createGrid(FiveBlock)
+export const FiveBlock = createBlock('Five', FIVE_COLORS.primary)
+export const FiveGrid = createGrid('Five', FiveBlock)
 
 export const FIVE: NBlock = {
   number: 5,

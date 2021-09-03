@@ -1,4 +1,16 @@
 import * as Color from 'color'
+import * as React from 'react'
+
+/**
+ * Sets the display name of a React functional component.
+ * @param name The display name.
+ * @param fc The functional component.
+ * @returns The same functional component.
+ */
+function withDisplayName<P>(name: string, fc: React.FC<P>): React.FC<P> {
+  fc.displayName = name
+  return fc
+}
 
 export interface BlockProps {
   color?: Color
@@ -18,9 +30,8 @@ export const Block: React.FC<BlockProps> = (props) => {
   )
 }
 
-// TODO: set display name
-export function createBlock(color: Color): React.FC<BlockProps> {
-  return (props) => <Block color={color} {...props} />
+export function createBlock(namePrefix: string, color: Color): React.FC<BlockProps> {
+  return withDisplayName(namePrefix + 'Block', (props) => <Block color={color} {...props} />)
 }
 
 export interface GridProps {
@@ -49,9 +60,8 @@ export const Grid: React.FC<GridProps> = (props) => {
   return <svg children={blocks} />
 }
 
-// TODO: set display name
-export function createGrid(block: typeof Block): React.FC<GridProps> {
-  return (props) => <Grid block={block} {...props} />
+export function createGrid(namePrefix: string, block: typeof Block): React.FC<GridProps> {
+  return withDisplayName(namePrefix + 'Grid', (props) => <Grid block={block} {...props} />)
 }
 
 export interface Form {
