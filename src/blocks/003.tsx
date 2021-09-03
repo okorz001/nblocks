@@ -1,5 +1,6 @@
 import * as Color from 'color'
 import { createBlock } from './Block'
+import Grid from './Grid'
 import NBlock from './NBlock'
 
 export const THREE_COLORS = {
@@ -17,9 +18,7 @@ export const THREE: NBlock = {
       height: 300,
       svg: () => (
         <svg>
-          <ThreeBlock x={0} y= {0} />
-          <ThreeBlock x={0} y= {100} />
-          <ThreeBlock x={0} y= {200} />
+          <Grid block={ThreeBlock} height={3} />
         </svg>
       ),
     },
@@ -29,9 +28,8 @@ export const THREE: NBlock = {
       height: 200,
       svg: () => (
         <svg>
-          <ThreeBlock x={0} y= {100} />
-          <ThreeBlock x={100} y= {100} />
-          <ThreeBlock x={100} y= {0} />
+          <ThreeBlock x={100} />
+          <Grid block={ThreeBlock} y={100} width={2} />
         </svg>
       ),
     },
@@ -41,9 +39,7 @@ export const THREE: NBlock = {
       height: 100,
       svg: () => (
         <svg>
-          <ThreeBlock x={0} y= {0} />
-          <ThreeBlock x={100} y= {0} />
-          <ThreeBlock x={200} y= {0} />
+          <Grid block={ThreeBlock} width={3} />
         </svg>
       ),
     },
@@ -53,9 +49,8 @@ export const THREE: NBlock = {
       height: 200,
       svg: () => (
         <svg>
-          <ThreeBlock x={0} y= {0} />
-          <ThreeBlock x={100} y= {0} />
-          <ThreeBlock x={100} y= {100} />
+          <ThreeBlock />
+          <Grid block={ThreeBlock} x={100} height={2} />
         </svg>
       ),
     },

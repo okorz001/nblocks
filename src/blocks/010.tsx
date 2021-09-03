@@ -1,5 +1,6 @@
 import * as Color from 'color'
 import { createBlock } from './Block'
+import Grid from './Grid'
 import NBlock from './NBlock'
 
 export const TEN_COLORS = {
@@ -17,16 +18,7 @@ export const TEN: NBlock = {
       height: 1000,
       svg: () => (
         <svg>
-          <TenBlock x={0} y= {0} />
-          <TenBlock x={0} y= {100} />
-          <TenBlock x={0} y= {200} />
-          <TenBlock x={0} y= {300} />
-          <TenBlock x={0} y= {400} />
-          <TenBlock x={0} y= {500} />
-          <TenBlock x={0} y= {600} />
-          <TenBlock x={0} y= {700} />
-          <TenBlock x={0} y= {800} />
-          <TenBlock x={0} y= {900} />
+          <Grid block={TenBlock} height={10} />
         </svg>
       ),
     },
@@ -36,16 +28,7 @@ export const TEN: NBlock = {
       height: 500,
       svg: () => (
         <svg>
-          <TenBlock x={0} y= {0} />
-          <TenBlock x={0} y= {100} />
-          <TenBlock x={0} y= {200} />
-          <TenBlock x={0} y= {300} />
-          <TenBlock x={0} y= {400} />
-          <TenBlock x={100} y= {0} />
-          <TenBlock x={100} y= {100} />
-          <TenBlock x={100} y= {200} />
-          <TenBlock x={100} y= {300} />
-          <TenBlock x={100} y= {400} />
+          <Grid block={TenBlock} width={2} height={5} />
         </svg>
       ),
     },
@@ -55,16 +38,10 @@ export const TEN: NBlock = {
       height: 400,
       svg: () => (
         <svg>
-          <TenBlock x={300} y= {0} />
-          <TenBlock x={200} y= {100} />
-          <TenBlock x={300} y= {100} />
-          <TenBlock x={100} y= {200} />
-          <TenBlock x={200} y= {200} />
-          <TenBlock x={300} y= {200} />
-          <TenBlock x={0} y= {300} />
-          <TenBlock x={100} y= {300} />
-          <TenBlock x={200} y= {300} />
-          <TenBlock x={300} y= {300} />
+          <TenBlock y={300} />
+          <Grid block={TenBlock} x={100} y={200} height={2} />
+          <Grid block={TenBlock} x={200} y={100} height={3} />
+          <Grid block={TenBlock} x={300} height={4} />
         </svg>
       ),
     },
@@ -74,16 +51,8 @@ export const TEN: NBlock = {
       height: 300,
       svg: () => (
         <svg>
-          <TenBlock x={0} y= {0} />
-          <TenBlock x={100} y= {0} />
-          <TenBlock x={200} y= {0} />
-          <TenBlock x={300} y= {0} />
-          <TenBlock x={0} y= {100} />
-          <TenBlock x={100} y= {100} />
-          <TenBlock x={200} y= {100} />
-          <TenBlock x={300} y= {100} />
-          <TenBlock x={200} y= {200} />
-          <TenBlock x={300} y= {200} />
+          <Grid block={TenBlock} width={4} height={2} />
+          <Grid block={TenBlock} x={200} y={200} width={2} />
         </svg>
       ),
     },
@@ -93,16 +62,8 @@ export const TEN: NBlock = {
       height: 300,
       svg: () => (
         <svg>
-          <TenBlock x={100} y= {0} />
-          <TenBlock x={200} y= {0} />
-          <TenBlock x={0} y= {100} />
-          <TenBlock x={100} y= {100} />
-          <TenBlock x={200} y= {100} />
-          <TenBlock x={300} y= {100} />
-          <TenBlock x={0} y= {200} />
-          <TenBlock x={100} y= {200} />
-          <TenBlock x={200} y= {200} />
-          <TenBlock x={300} y= {200} />
+          <Grid block={TenBlock} x={100} width={2} />
+          <Grid block={TenBlock} y={100} width={4} height={2} />
         </svg>
       ),
     },
@@ -112,16 +73,10 @@ export const TEN: NBlock = {
       height: 400,
       svg: () => (
         <svg>
-          <TenBlock x={0} y= {0} />
-          <TenBlock x={0} y= {100} />
-          <TenBlock x={0} y= {200} />
-          <TenBlock x={0} y= {300} />
-          <TenBlock x={100} y= {0} />
-          <TenBlock x={100} y= {300} />
-          <TenBlock x={200} y= {0} />
-          <TenBlock x={200} y= {100} />
-          <TenBlock x={200} y= {200} />
-          <TenBlock x={200} y= {300} />
+          <Grid block={TenBlock} height={4} />
+          <TenBlock x={100} />
+          <TenBlock x={100} y={300} />
+          <Grid block={TenBlock} x={200} height={4} />
         </svg>
       ),
     },
@@ -131,16 +86,8 @@ export const TEN: NBlock = {
       height: 300,
       svg: () => (
         <svg>
-          <TenBlock x={0} y= {200} />
-          <TenBlock x={100} y= {0} />
-          <TenBlock x={100} y= {100} />
-          <TenBlock x={100} y= {200} />
-          <TenBlock x={200} y= {0} />
-          <TenBlock x={200} y= {100} />
-          <TenBlock x={200} y= {200} />
-          <TenBlock x={300} y= {0} />
-          <TenBlock x={300} y= {100} />
-          <TenBlock x={300} y= {200} />
+          <TenBlock x={0} y={200} />
+          <Grid block={TenBlock} x={100} width={3} height={3} />
         </svg>
       ),
     },
@@ -150,16 +97,8 @@ export const TEN: NBlock = {
       height: 400,
       svg: () => (
         <svg>
-          <TenBlock x={0} y= {200} />
-          <TenBlock x={0} y= {300} />
-          <TenBlock x={100} y= {0} />
-          <TenBlock x={100} y= {100} />
-          <TenBlock x={100} y= {200} />
-          <TenBlock x={100} y= {300} />
-          <TenBlock x={200} y= {0} />
-          <TenBlock x={200} y= {100} />
-          <TenBlock x={200} y= {200} />
-          <TenBlock x={200} y= {300} />
+          <Grid block={TenBlock} y={200} height={2} />
+          <Grid block={TenBlock} x={100} width={2} height={4} />
         </svg>
       ),
     },
@@ -169,16 +108,9 @@ export const TEN: NBlock = {
       height: 400,
       svg: () => (
         <svg>
-          <TenBlock x={0} y= {0} />
-          <TenBlock x={100} y= {0} />
-          <TenBlock x={100} y= {100} />
-          <TenBlock x={100} y= {200} />
-          <TenBlock x={100} y= {300} />
-          <TenBlock x={200} y= {100} />
-          <TenBlock x={200} y= {200} />
-          <TenBlock x={200} y= {300} />
-          <TenBlock x={300} y= {200} />
-          <TenBlock x={300} y= {300} />
+          <Grid block={TenBlock} width={2} />
+          <Grid block={TenBlock} x={100} y={100} width={2} />
+          <Grid block={TenBlock} x={100} y={200} width={3} height={2} />
         </svg>
       ),
     },
@@ -188,35 +120,24 @@ export const TEN: NBlock = {
       height: 400,
       svg: () => (
         <svg>
-          <TenBlock x={0} y= {100} />
-          <TenBlock x={100} y= {100} />
-          <TenBlock x={100} y= {200} />
-          <TenBlock x={100} y= {300} />
-          <TenBlock x={200} y= {300} />
-          <TenBlock x={300} y= {300} />
-          <TenBlock x={300} y= {200} />
-          <TenBlock x={300} y= {100} />
-          <TenBlock x={300} y= {0} />
-          <TenBlock x={400} y= {0} />
+          <TenBlock y={100} />
+          <Grid block={TenBlock} x={100} y={100} height={3} />
+          <TenBlock x={200} y={300} />
+          <Grid block={TenBlock} x={300} height={4} />
+          <TenBlock x={400} />
         </svg>
       ),
     },
+    // TODO: very similar to 16, there's also a C version
     // n
     {
       width: 400,
       height: 300,
       svg: () => (
         <svg>
-          <TenBlock x={0} y= {0} />
-          <TenBlock x={100} y= {0} />
-          <TenBlock x={200} y= {0} />
-          <TenBlock x={300} y= {0} />
-          <TenBlock x={0} y= {100} />
-          <TenBlock x={100} y= {100} />
-          <TenBlock x={200} y= {100} />
-          <TenBlock x={300} y= {100} />
-          <TenBlock x={0} y= {200} />
-          <TenBlock x={300} y= {200} />
+          <Grid block={TenBlock} width={4} height={2} />
+          <TenBlock x={0} y={200} />
+          <TenBlock x={300} y={200} />
         </svg>
       ),
     },
@@ -226,16 +147,9 @@ export const TEN: NBlock = {
       height: 600,
       svg: () => (
         <svg>
-          <TenBlock x={0} y= {0} />
-          <TenBlock x={0} y= {100} />
-          <TenBlock x={0} y= {200} />
-          <TenBlock x={0} y= {300} />
-          <TenBlock x={100} y= {100} />
-          <TenBlock x={100} y= {200} />
-          <TenBlock x={100} y= {300} />
-          <TenBlock x={100} y= {400} />
-          <TenBlock x={100} y= {500} />
-          <TenBlock x={200} y= {100} />
+          <Grid block={TenBlock} height={4} />
+          <Grid block={TenBlock} x={100} y={100} height={5} />
+          <TenBlock x={200} y={100} />
         </svg>
       ),
     },

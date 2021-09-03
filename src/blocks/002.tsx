@@ -1,5 +1,6 @@
 import * as Color from 'color'
 import { createBlock } from './Block'
+import Grid from './Grid'
 import NBlock from './NBlock'
 
 export const TWO_COLORS = {
@@ -17,8 +18,7 @@ export const TWO: NBlock = {
       height: 200,
       svg: () => (
         <svg>
-          <TwoBlock x={0} y= {0} />
-          <TwoBlock x={0} y= {100} />
+          <Grid block={TwoBlock} height={2} />
         </svg>
       ),
     },
@@ -28,8 +28,7 @@ export const TWO: NBlock = {
       height: 100,
       svg: () => (
         <svg>
-          <TwoBlock x={0} y= {0} />
-          <TwoBlock x={100} y= {0} />
+          <Grid block={TwoBlock} width={2} />
         </svg>
       ),
     },

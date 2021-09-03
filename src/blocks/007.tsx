@@ -24,13 +24,13 @@ export const SEVEN: NBlock = {
       height: 700,
       svg: () => (
         <svg>
-          <SevenBlock x={0} y= {0} />
-          <SixBlock x={0} y= {100} />
-          <FiveBlock x={0} y= {200} />
-          <FourBlock x={0} y= {300} />
-          <ThreeBlock x={0} y= {400} />
-          <TwoBlock x={0} y= {500} />
-          <OneBlock x={0} y= {600} />
+          <SevenBlock />
+          <SixBlock y={100} />
+          <FiveBlock y={200} />
+          <FourBlock y={300} />
+          <ThreeBlock y={400} />
+          <TwoBlock y={500} />
+          <OneBlock y={600} />
         </svg>
       ),
     },
@@ -40,13 +40,13 @@ export const SEVEN: NBlock = {
       height: 400,
       svg: () => (
         <svg>
-          <SevenBlock x={100} y= {0} />
-          <SixBlock x={100} y= {100} />
-          <FiveBlock x={0} y= {100} />
-          <FourBlock x={100} y= {200} />
-          <ThreeBlock x={0} y= {200} />
-          <TwoBlock x={100} y= {300} />
-          <OneBlock x={0} y= {300} />
+          <FiveBlock y={100} />
+          <ThreeBlock y={200} />
+          <OneBlock y={300} />
+          <SevenBlock x={100} />
+          <SixBlock x={100} y={100} />
+          <FourBlock x={100} y={200} />
+          <TwoBlock x={100} y={300} />
         </svg>
       ),
     },
@@ -56,29 +56,29 @@ export const SEVEN: NBlock = {
       height: 300,
       svg: () => (
         <svg>
-          <SevenBlock x={0} y= {0} />
-          <SixBlock x={0} y= {100} />
-          <FiveBlock x={0} y= {200} />
-          <FourBlock x={100} y= {200} />
-          <ThreeBlock x={100} y= {100} />
-          <TwoBlock x={200} y= {200} />
-          <OneBlock x={200} y= {100} />
+          <SevenBlock />
+          <SixBlock y={100} />
+          <FiveBlock y={200} />
+          <ThreeBlock x={100} y={100} />
+          <FourBlock x={100} y={200} />
+          <OneBlock x={200} y={100} />
+          <TwoBlock x={200} y={200} />
         </svg>
       ),
     },
-    // odd
+    // T
     {
       width: 300,
       height: 500,
       svg: () => (
         <svg>
-          <OneBlock x={0} y= {0} />
-          <TwoBlock x={100} y= {0} />
-          <ThreeBlock x={200} y= {0} />
-          <FourBlock x={100} y= {100} />
-          <FiveBlock x={100} y= {200} />
-          <SixBlock x={100} y= {300} />
-          <SevenBlock x={100} y= {400} />
+          <OneBlock />
+          <TwoBlock x={100} />
+          <FourBlock x={100} y={100} />
+          <FiveBlock x={100} y={200} />
+          <SixBlock x={100} y={300} />
+          <SevenBlock x={100} y={400} />
+          <ThreeBlock x={200} />
         </svg>
       ),
     },
@@ -88,13 +88,13 @@ export const SEVEN: NBlock = {
       height: 500,
       svg: () => (
         <svg>
-          <OneBlock x={200} y= {0} />
-          <TwoBlock x={200} y= {100} />
-          <ThreeBlock x={200} y= {200} />
-          <FourBlock x={100} y= {200} />
-          <FiveBlock x={0} y= {200} />
-          <SixBlock x={0} y= {300} />
-          <SevenBlock x={0} y= {400} />
+          <FiveBlock y={200} />
+          <SixBlock y={300} />
+          <SevenBlock y={400} />
+          <FourBlock x={100} y={200} />
+          <OneBlock x={200} />
+          <TwoBlock x={200} y={100} />
+          <ThreeBlock x={200} y={200} />
         </svg>
       ),
     },
@@ -104,13 +104,13 @@ export const SEVEN: NBlock = {
       height: 400,
       svg: () => (
         <svg>
-          <SevenBlock x={0} y= {0} />
-          <SixBlock x={100} y= {0} />
-          <FiveBlock x={200} y= {0} />
-          <FourBlock x={300} y= {0} />
-          <ThreeBlock x={300} y= {100} />
-          <TwoBlock x={300} y= {200} />
-          <OneBlock x={300} y= {300} />
+          <SevenBlock />
+          <SixBlock x={100} />
+          <FiveBlock x={200} />
+          <FourBlock x={300} />
+          <ThreeBlock x={300} y={100} />
+          <TwoBlock x={300} y={200} />
+          <OneBlock x={300} y={300} />
         </svg>
       ),
     },

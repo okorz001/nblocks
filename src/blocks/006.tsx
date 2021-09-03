@@ -1,5 +1,6 @@
 import * as Color from 'color'
 import { createBlock } from './Block'
+import Grid from './Grid'
 import NBlock from './NBlock'
 
 export const SIX_COLORS = {
@@ -17,12 +18,7 @@ export const SIX: NBlock = {
       height: 300,
       svg: () => (
         <svg>
-          <SixBlock x={0} y= {0} />
-          <SixBlock x={0} y= {100} />
-          <SixBlock x={0} y= {200} />
-          <SixBlock x={100} y= {0} />
-          <SixBlock x={100} y= {100} />
-          <SixBlock x={100} y= {200} />
+          <Grid block={SixBlock} width={2} height={3} />
         </svg>
       ),
     },
@@ -32,27 +28,7 @@ export const SIX: NBlock = {
       height: 600,
       svg: () => (
         <svg>
-          <SixBlock x={0} y= {0} />
-          <SixBlock x={0} y= {100} />
-          <SixBlock x={0} y= {200} />
-          <SixBlock x={0} y= {300} />
-          <SixBlock x={0} y= {400} />
-          <SixBlock x={0} y= {500} />
-        </svg>
-      ),
-    },
-    // pipe
-    {
-      width: 400,
-      height: 200,
-      svg: () => (
-        <svg>
-          <SixBlock x={0} y= {0} />
-          <SixBlock x={100} y= {0} />
-          <SixBlock x={0} y= {100} />
-          <SixBlock x={100} y= {100} />
-          <SixBlock x={200} y= {100} />
-          <SixBlock x={300} y= {100} />
+          <Grid block={SixBlock} height={6} />
         </svg>
       ),
     },
@@ -62,12 +38,20 @@ export const SIX: NBlock = {
       height: 300,
       svg: () => (
         <svg>
-          <SixBlock x={200} y= {0} />
-          <SixBlock x={200} y= {100} />
-          <SixBlock x={100} y= {100} />
-          <SixBlock x={0} y= {200} />
-          <SixBlock x={100} y= {200} />
-          <SixBlock x={200} y= {200} />
+          <SixBlock y={200} />
+          <Grid block={SixBlock} x={100} y={100} height={2} />
+          <Grid block={SixBlock} x={200} height={3} />
+        </svg>
+      ),
+    },
+    // pipe
+    {
+      width: 400,
+      height: 200,
+      svg: () => (
+        <svg>
+          <Grid block={SixBlock} width={2} />
+          <Grid block={SixBlock} y={100} width={4} />
         </svg>
       ),
     },
@@ -77,12 +61,8 @@ export const SIX: NBlock = {
       height: 400,
       svg: () => (
         <svg>
-          <SixBlock x={100} y= {0} />
-          <SixBlock x={100} y= {100} />
-          <SixBlock x={100} y= {200} />
-          <SixBlock x={0} y= {100} />
-          <SixBlock x={0} y= {200} />
-          <SixBlock x={0} y= {300} />
+          <Grid block={SixBlock} y={100} height={3} />
+          <Grid block={SixBlock} x={100} height={3} />
         </svg>
       ),
     },
@@ -92,12 +72,9 @@ export const SIX: NBlock = {
       height: 300,
       svg: () => (
         <svg>
-          <SixBlock x={0} y= {0} />
-          <SixBlock x={0} y= {100} />
-          <SixBlock x={0} y= {200} />
-          <SixBlock x={100} y= {100} />
-          <SixBlock x={200} y= {0} />
-          <SixBlock x={200} y= {100} />
+          <Grid block={SixBlock} height={3} />
+          <SixBlock x={100} y={100} />
+          <Grid block={SixBlock} x={200} height={2} />
         </svg>
       ),
     },
@@ -107,12 +84,9 @@ export const SIX: NBlock = {
       height: 300,
       svg: () => (
         <svg>
-          <SixBlock x={0} y= {0} />
-          <SixBlock x={100} y= {0} />
-          <SixBlock x={100} y= {100} />
-          <SixBlock x={200} y= {100} />
-          <SixBlock x={200} y= {200} />
-          <SixBlock x={300} y= {200} />
+          <Grid block={SixBlock} width={2} />
+          <Grid block={SixBlock} x={100} y={100} width={2} />
+          <Grid block={SixBlock} x={200} y={200} width={2} />
         </svg>
       ),
     },
@@ -122,12 +96,8 @@ export const SIX: NBlock = {
       height: 200,
       svg: () => (
         <svg>
-          <SixBlock x={100} y= {0} />
-          <SixBlock x={200} y= {0} />
-          <SixBlock x={0} y= {100} />
-          <SixBlock x={100} y= {100} />
-          <SixBlock x={200} y= {100} />
-          <SixBlock x={300} y= {100} />
+          <Grid block={SixBlock} x={100} width={2} />
+          <Grid block={SixBlock} y={100} width={4} />
         </svg>
       ),
     },
@@ -137,12 +107,9 @@ export const SIX: NBlock = {
       height: 400,
       svg: () => (
         <svg>
-          <SixBlock x={200} y= {0} />
-          <SixBlock x={200} y= {100} />
-          <SixBlock x={200} y= {200} />
-          <SixBlock x={100} y= {200} />
-          <SixBlock x={0} y= {200} />
-          <SixBlock x={0} y= {300} />
+          <Grid block={SixBlock} y={200} height={2} />
+          <SixBlock x={100} y={200} />
+          <Grid block={SixBlock} x={200} height={3} />
         </svg>
       ),
     },
@@ -152,12 +119,9 @@ export const SIX: NBlock = {
       height: 200,
       svg: () => (
         <svg>
-          <SixBlock x={0} y= {0} />
-          <SixBlock x={300} y= {0} />
-          <SixBlock x={0} y= {100} />
-          <SixBlock x={100} y= {100} />
-          <SixBlock x={200} y= {100} />
-          <SixBlock x={300} y= {100} />
+          <SixBlock />
+          <SixBlock x={300} />
+          <Grid block={SixBlock} y={100} width={4} />
         </svg>
       ),
     },

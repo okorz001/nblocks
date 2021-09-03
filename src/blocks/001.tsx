@@ -16,7 +16,7 @@ export const ONE: NBlock = {
       height: 100,
       svg: () => (
         <svg>
-          <OneBlock x={0} y= {0} />
+          <OneBlock />
         </svg>
       ),
     },

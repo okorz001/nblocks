@@ -1,3 +1,4 @@
+import Grid from './Grid'
 import NBlock from './NBlock'
 import { TwoBlock } from './002'
 import { TenBlock } from './010'
@@ -11,18 +12,8 @@ export const TWELVE: NBlock = {
       height: 400,
       svg: () => (
         <svg>
-          <TenBlock x={0} y= {0} />
-          <TenBlock x={0} y= {100} />
-          <TenBlock x={0} y= {200} />
-          <TenBlock x={0} y= {300} />
-          <TenBlock x={100} y= {0} />
-          <TwoBlock x={100} y= {100} />
-          <TwoBlock x={100} y= {200} />
-          <TenBlock x={100} y= {300} />
-          <TenBlock x={200} y= {0} />
-          <TenBlock x={200} y= {100} />
-          <TenBlock x={200} y= {200} />
-          <TenBlock x={200} y= {300} />
+          <Grid block={TenBlock} width={3} height={4} />
+          <Grid block={TwoBlock} x={100} y={100} height={2} />
         </svg>
       ),
     },
@@ -32,18 +23,8 @@ export const TWELVE: NBlock = {
       height: 600,
       svg: () => (
         <svg>
-          <TwoBlock x={0} y= {0} />
-          <TwoBlock x={100} y= {0} />
-          <TenBlock x={0} y= {100} />
-          <TenBlock x={100} y= {100} />
-          <TenBlock x={0} y= {200} />
-          <TenBlock x={100} y= {200} />
-          <TenBlock x={0} y= {300} />
-          <TenBlock x={100} y= {300} />
-          <TenBlock x={0} y= {400} />
-          <TenBlock x={100} y= {400} />
-          <TenBlock x={0} y= {500} />
-          <TenBlock x={100} y= {500} />
+          <Grid block={TwoBlock} width={2} />
+          <Grid block={TenBlock} y={100} width={2} height={5} />
         </svg>
       ),
     },
@@ -53,18 +34,8 @@ export const TWELVE: NBlock = {
       height: 1000,
       svg: () => (
         <svg>
-          <TenBlock x={0} y= {0} />
-          <TenBlock x={0} y= {100} />
-          <TenBlock x={0} y= {200} />
-          <TenBlock x={0} y= {300} />
-          <TenBlock x={0} y= {400} />
-          <TenBlock x={0} y= {500} />
-          <TenBlock x={0} y= {600} />
-          <TenBlock x={0} y= {700} />
-          <TenBlock x={0} y= {800} />
-          <TenBlock x={0} y= {900} />
-          <TwoBlock x={100} y= {800} />
-          <TwoBlock x={100} y= {900} />
+          <Grid block={TenBlock} height={10} />
+          <Grid block={TwoBlock} x={100} y={800} height={2} />
         </svg>
       ),
     },
@@ -74,18 +45,10 @@ export const TWELVE: NBlock = {
       height: 400,
       svg: () => (
         <svg>
-          <TenBlock x={0} y= {0} />
-          <TenBlock x={0} y= {100} />
-          <TenBlock x={0} y= {200} />
-          <TenBlock x={0} y= {300} />
-          <TenBlock x={100} y= {300} />
-          <TenBlock x={200} y= {300} />
-          <TenBlock x={300} y= {300} />
-          <TenBlock x={300} y= {200} />
-          <TenBlock x={300} y= {100} />
-          <TenBlock x={300} y= {0} />
-          <TwoBlock x={200} y= {0} />
-          <TwoBlock x={100} y= {0} />
+          <Grid block={TenBlock} height={4} />
+          <Grid block={TwoBlock} x={100} width={2} />
+          <Grid block={TenBlock} x={100} y={300} width={2} />
+          <Grid block={TenBlock} x={300} height={4} />
         </svg>
       ),
     },
@@ -95,18 +58,8 @@ export const TWELVE: NBlock = {
       height: 500,
       svg: () => (
         <svg>
-          <TenBlock x={0} y= {0} />
-          <TenBlock x={0} y= {100} />
-          <TenBlock x={0} y= {200} />
-          <TenBlock x={0} y= {300} />
-          <TenBlock x={0} y= {400} />
-          <TenBlock x={100} y= {0} />
-          <TenBlock x={100} y= {100} />
-          <TenBlock x={100} y= {200} />
-          <TenBlock x={100} y= {300} />
-          <TenBlock x={100} y= {400} />
-          <TwoBlock x={200} y= {300} />
-          <TwoBlock x={200} y= {400} />
+          <Grid block={TenBlock} width={2} height={5} />
+          <Grid block={TwoBlock} x={200} y={300} height={2} />
         </svg>
       ),
     },

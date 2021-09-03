@@ -1,5 +1,6 @@
 import * as Color from 'color'
 import { createBlock } from './Block'
+import Grid from './Grid'
 import NBlock from './NBlock'
 
 export const FOUR_COLORS = {
@@ -17,10 +18,7 @@ export const FOUR: NBlock = {
       height: 200,
       svg: () => (
         <svg>
-          <FourBlock x={0} y= {0} />
-          <FourBlock x={0} y= {100} />
-          <FourBlock x={100} y= {0} />
-          <FourBlock x={100} y= {100} />
+          <Grid block={FourBlock} width={2} height={2} />
         </svg>
       ),
     },
@@ -30,10 +28,7 @@ export const FOUR: NBlock = {
       height: 400,
       svg: () => (
         <svg>
-          <FourBlock x={0} y= {0} />
-          <FourBlock x={0} y= {100} />
-          <FourBlock x={0} y= {200} />
-          <FourBlock x={0} y= {300} />
+        <Grid block={FourBlock} height={4} />
         </svg>
       ),
     },
@@ -43,10 +38,8 @@ export const FOUR: NBlock = {
       height: 300,
       svg: () => (
         <svg>
-          <FourBlock x={0} y= {0} />
-          <FourBlock x={0} y= {100} />
-          <FourBlock x={0} y= {200} />
-          <FourBlock x={100} y= {200} />
+          <Grid block={FourBlock} height={3} />
+          <FourBlock x={100} y={200} />
         </svg>
       ),
     },
@@ -56,10 +49,8 @@ export const FOUR: NBlock = {
       height: 200,
       svg: () => (
         <svg>
-          <FourBlock x={0} y= {0} />
-          <FourBlock x={100} y= {0} />
-          <FourBlock x={200} y= {0} />
-          <FourBlock x={100} y= {100} />
+          <Grid block={FourBlock} width={3} />
+          <FourBlock x={100} y={100} />
         </svg>
       ),
     },
@@ -69,10 +60,8 @@ export const FOUR: NBlock = {
       height: 300,
       svg: () => (
         <svg>
-          <FourBlock x={0} y= {0} />
-          <FourBlock x={0} y= {100} />
-          <FourBlock x={100} y= {100} />
-          <FourBlock x={100} y= {200} />
+          <Grid block={FourBlock} height={2} />
+          <Grid block={FourBlock} x={100} y={100} height={2} />
         </svg>
       ),
     },
@@ -82,10 +71,7 @@ export const FOUR: NBlock = {
       height: 100,
       svg: () => (
         <svg>
-          <FourBlock x={0} y= {0} />
-          <FourBlock x={100} y= {0} />
-          <FourBlock x={200} y= {0} />
-          <FourBlock x={300} y= {0} />
+        <Grid block={FourBlock} width={4} />
         </svg>
       ),
     },
