@@ -1,6 +1,5 @@
 import * as Color from 'color'
-import { createBlock } from './Block'
-import NBlock from './NBlock'
+import { createBlock, NBlock } from './common'
 
 export const ONE_COLORS = {
   primary: new Color('#E41C20'),

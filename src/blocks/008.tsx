@@ -1,13 +1,12 @@
 import * as Color from 'color'
-import { createBlock } from './Block'
-import Grid from './Grid'
-import NBlock from './NBlock'
+import { createBlock, createGrid, NBlock } from './common'
 
 export const EIGHT_COLORS = {
   primary: new Color('#EB27A1'),
 }
 
 export const EightBlock = createBlock(EIGHT_COLORS.primary)
+export const EightGrid = createGrid(EightBlock)
 
 export const EIGHT: NBlock = {
   number: 8,
@@ -18,7 +17,7 @@ export const EIGHT: NBlock = {
       height: 400,
       svg: () => (
         <svg>
-          <Grid block={EightBlock} width={2} height={4} />
+          <EightGrid width={2} height={4} />
         </svg>
       ),
     },
@@ -28,7 +27,7 @@ export const EIGHT: NBlock = {
       height: 800,
       svg: () => (
         <svg>
-          <Grid block={EightBlock} height={8} />
+          <EightGrid height={8} />
         </svg>
       ),
     },
@@ -38,10 +37,10 @@ export const EIGHT: NBlock = {
       height: 300,
       svg: () => (
         <svg>
-          <Grid block={EightBlock} height={3} />
+          <EightGrid height={3} />
           <EightBlock x={100} />
           <EightBlock x={100} y={200} />
-          <Grid block={EightBlock} x={200} height={3} />
+          <EightGrid x={200} height={3} />
         </svg>
       ),
     },
@@ -51,8 +50,8 @@ export const EIGHT: NBlock = {
       height: 600,
       svg: () => (
         <svg>
-          <Grid block={EightBlock} x={100} height={6} />
-          <Grid block={EightBlock} y={100} width={3} />
+          <EightGrid x={100} height={6} />
+          <EightGrid y={100} width={3} />
         </svg>
       ),
     },
@@ -62,8 +61,8 @@ export const EIGHT: NBlock = {
       height: 500,
       svg: () => (
         <svg>
-          <Grid block={EightBlock} x={300} height={5} />
-          <Grid block={EightBlock} y={100} width={3} />
+          <EightGrid x={300} height={5} />
+          <EightGrid y={100} width={3} />
         </svg>
       ),
     },
@@ -75,8 +74,8 @@ export const EIGHT: NBlock = {
         <svg>
           <EightBlock y={200} />
           <EightBlock x={100} />
-          <Grid block={EightBlock} x={100} y={200} height={3} />
-          <Grid block={EightBlock} x={200} height={3} />
+          <EightGrid x={100} y={200} height={3} />
+          <EightGrid x={200} height={3} />
         </svg>
       ),
     },
@@ -86,9 +85,9 @@ export const EIGHT: NBlock = {
       height: 300,
       svg: () => (
         <svg>
-          <Grid block={EightBlock} y={100} height={2} />
-          <Grid block={EightBlock} x={100} width={2} height={2} />
-          <Grid block={EightBlock} x={300} y={100} height={2} />
+          <EightGrid y={100} height={2} />
+          <EightGrid x={100} width={2} height={2} />
+          <EightGrid x={300} y={100} height={2} />
         </svg>
       ),
     },
@@ -98,9 +97,9 @@ export const EIGHT: NBlock = {
       height: 300,
       svg: () => (
         <svg>
-          <Grid block={EightBlock} height={3} />
-          <Grid block={EightBlock} x={300} height={3} />
-          <Grid block={EightBlock} x={100} y={200} width={2} />
+          <EightGrid height={3} />
+          <EightGrid x={300} height={3} />
+          <EightGrid x={100} y={200} width={2} />
         </svg>
       ),
     },
@@ -110,8 +109,8 @@ export const EIGHT: NBlock = {
       height: 300,
       svg: () => (
         <svg>
-          <Grid block={EightBlock} width={2} height={3} />
-          <Grid block={EightBlock} x={200} y={100} height={2} />
+          <EightGrid width={2} height={3} />
+          <EightGrid x={200} y={100} height={2} />
         </svg>
       ),
     },
@@ -121,8 +120,8 @@ export const EIGHT: NBlock = {
       height: 400,
       svg: () => (
         <svg>
-          <Grid block={EightBlock} x={100} height={4} />
-          <Grid block={EightBlock} y={100} width={3} height={2} />
+          <EightGrid x={100} height={4} />
+          <EightGrid y={100} width={3} height={2} />
         </svg>
       ),
     },
@@ -132,8 +131,8 @@ export const EIGHT: NBlock = {
       height: 700,
       svg: () => (
         <svg>
-          <Grid block={EightBlock} y={300} height={4} />
-          <Grid block={EightBlock} x={100} height={4} />
+          <EightGrid y={300} height={4} />
+          <EightGrid x={100} height={4} />
         </svg>
       ),
     },
@@ -143,10 +142,10 @@ export const EIGHT: NBlock = {
       height: 500,
       svg: () => (
         <svg>
-          <Grid block={EightBlock} height={2} />
-          <Grid block={EightBlock} x={100} y={100} height={2} />
-          <Grid block={EightBlock} x={200} y={200} height={2} />
-          <Grid block={EightBlock} x={300} y={300} height={2} />
+          <EightGrid height={2} />
+          <EightGrid x={100} y={100} height={2} />
+          <EightGrid x={200} y={200} height={2} />
+          <EightGrid x={300} y={300} height={2} />
         </svg>
       ),
     },
@@ -156,9 +155,9 @@ export const EIGHT: NBlock = {
       height: 550,
       svg: () => (
         <svg>
-          <Grid block={EightBlock} width={3} />
-          <Grid block={EightBlock} x={100} y={200} height={2} />
-          <Grid block={EightBlock} x={200} y={100} height={2} />
+          <EightGrid width={3} />
+          <EightGrid x={100} y={200} height={2} />
+          <EightGrid x={200} y={100} height={2} />
           <EightBlock x={100} y={450} />
         </svg>
       ),

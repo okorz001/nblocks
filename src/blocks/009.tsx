@@ -1,7 +1,5 @@
 import * as Color from 'color'
-import { createBlock } from './Block'
-import Grid from './Grid'
-import NBlock from './NBlock'
+import { createBlock, createGrid, NBlock } from './common'
 
 export const NINE_COLORS = {
   dark: new Color('#8A8C8E'),
@@ -10,8 +8,13 @@ export const NINE_COLORS = {
 }
 
 export const NineDarkBlock = createBlock(NINE_COLORS.dark)
+export const NineDarkGrid = createGrid(NineDarkBlock)
+
 export const NineMediumBlock = createBlock(NINE_COLORS.medium)
+export const NineMediumGrid = createGrid(NineMediumBlock)
+
 export const NineLightBlock = createBlock(NINE_COLORS.light)
+export const NineLightGrid = createGrid(NineLightBlock)
 
 export const NINE: NBlock = {
   number: 9,
@@ -22,9 +25,9 @@ export const NINE: NBlock = {
       height: 300,
       svg: () => (
         <svg>
-          <Grid block={NineDarkBlock} width={3} />
-          <Grid block={NineMediumBlock} y={100} width={3} />
-          <Grid block={NineLightBlock} y={200} width={3} />
+          <NineDarkGrid width={3} />
+          <NineMediumGrid y={100} width={3} />
+          <NineLightGrid y={200} width={3} />
         </svg>
       ),
     },
@@ -34,9 +37,9 @@ export const NINE: NBlock = {
       height: 900,
       svg: () => (
         <svg>
-          <Grid block={NineDarkBlock} height={3} />
-          <Grid block={NineMediumBlock} y={300} height={3} />
-          <Grid block={NineLightBlock} y={600} height={3} />
+          <NineDarkGrid height={3} />
+          <NineMediumGrid y={300} height={3} />
+          <NineLightGrid y={600} height={3} />
         </svg>
       ),
     },
@@ -47,11 +50,11 @@ export const NINE: NBlock = {
       svg: () => (
         <svg>
           <NineDarkBlock x={100} />
-          <Grid block={NineDarkBlock} y={100} width={2} />
-          <Grid block={NineMediumBlock} y={200} width={2} />
+          <NineDarkGrid y={100} width={2} />
+          <NineMediumGrid y={200} width={2} />
           <NineLightBlock y={300} />
           <NineMediumBlock x={100} y={300} />
-          <Grid block={NineLightBlock} y={400} width={2} />
+          <NineLightGrid y={400} width={2} />
         </svg>
       ),
     },
@@ -61,12 +64,12 @@ export const NINE: NBlock = {
       height: 400,
       svg: () => (
         <svg>
-          <Grid block={NineLightBlock} height={2} />
+          <NineLightGrid height={2} />
           <NineLightBlock x={100} />
           <NineMediumBlock x={200} />
           <NineDarkBlock x={200} y={300} />
-          <Grid block={NineMediumBlock} x={300} height={2} />
-          <Grid block={NineDarkBlock} x={300} y={200} height={2} />
+          <NineMediumGrid x={300} height={2} />
+          <NineDarkGrid x={300} y={200} height={2} />
         </svg>
       ),
     },
@@ -77,9 +80,9 @@ export const NINE: NBlock = {
       svg: () => (
         <svg>
           <NineLightBlock />
-          <Grid block={NineLightBlock} x={100} height={2} />
-          <Grid block={NineMediumBlock} x={200} height={3} />
-          <Grid block={NineDarkBlock} x={300} height={2} />
+          <NineLightGrid x={100} height={2} />
+          <NineMediumGrid x={200} height={3} />
+          <NineDarkGrid x={300} height={2} />
           <NineDarkBlock x={400} />
         </svg>
       ),
@@ -90,9 +93,9 @@ export const NINE: NBlock = {
       height: 400,
       svg: () => (
         <svg>
-          <Grid block={NineLightBlock} height={3} />
-          <Grid block={NineMediumBlock} x={100} y={100} height={3} />
-          <Grid block={NineDarkBlock} x={200} height={3} />
+          <NineLightGrid height={3} />
+          <NineMediumGrid x={100} y={100} height={3} />
+          <NineDarkGrid x={200} height={3} />
         </svg>
       ),
     },

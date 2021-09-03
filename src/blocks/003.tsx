@@ -1,13 +1,12 @@
 import * as Color from 'color'
-import { createBlock } from './Block'
-import Grid from './Grid'
-import NBlock from './NBlock'
+import { createBlock, createGrid, NBlock } from './common'
 
 export const THREE_COLORS = {
   primary: new Color('#E0CF16'),
 }
 
 export const ThreeBlock = createBlock(THREE_COLORS.primary)
+export const ThreeGrid = createGrid(ThreeBlock)
 
 export const THREE: NBlock = {
   number: 3,
@@ -18,7 +17,7 @@ export const THREE: NBlock = {
       height: 300,
       svg: () => (
         <svg>
-          <Grid block={ThreeBlock} height={3} />
+          <ThreeGrid height={3} />
         </svg>
       ),
     },
@@ -29,7 +28,7 @@ export const THREE: NBlock = {
       svg: () => (
         <svg>
           <ThreeBlock x={100} />
-          <Grid block={ThreeBlock} y={100} width={2} />
+          <ThreeGrid y={100} width={2} />
         </svg>
       ),
     },
@@ -39,7 +38,7 @@ export const THREE: NBlock = {
       height: 100,
       svg: () => (
         <svg>
-          <Grid block={ThreeBlock} width={3} />
+          <ThreeGrid width={3} />
         </svg>
       ),
     },
@@ -50,7 +49,7 @@ export const THREE: NBlock = {
       svg: () => (
         <svg>
           <ThreeBlock />
-          <Grid block={ThreeBlock} x={100} height={2} />
+          <ThreeGrid x={100} height={2} />
         </svg>
       ),
     },

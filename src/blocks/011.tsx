@@ -1,7 +1,6 @@
-import Grid from './Grid'
-import NBlock from './NBlock'
+import { NBlock } from './common'
 import { OneBlock } from './001'
-import { TenBlock } from './010'
+import { TenBlock, TenGrid } from './010'
 
 export const ELEVEN: NBlock = {
   number: 11,
@@ -13,7 +12,7 @@ export const ELEVEN: NBlock = {
       svg: () => (
         <svg>
           <OneBlock x={100} y={0} />
-          <Grid block={TenBlock} y={100} width={2} height={5} />
+          <TenGrid y={100} width={2} height={5} />
         </svg>
       ),
     },
@@ -23,7 +22,7 @@ export const ELEVEN: NBlock = {
       height: 1000,
       svg: () => (
         <svg>
-          <Grid block={TenBlock} height={10} />
+          <TenGrid height={10} />
           <OneBlock x={100} y={900} />
         </svg>
       ),
@@ -35,7 +34,7 @@ export const ELEVEN: NBlock = {
       svg: () => (
         <svg>
           <OneBlock x={200} />
-          <Grid block={TenBlock} y={100} width={3} height={3} />
+          <TenGrid y={100} width={3} height={3} />
           <TenBlock y={400} />
         </svg>
       ),
@@ -47,7 +46,7 @@ export const ELEVEN: NBlock = {
       svg: () => (
         <svg>
           <OneBlock x={400} y={0} />
-          <Grid block={TenBlock} y={100} width={5} height={2} />
+          <TenGrid y={100} width={5} height={2} />
         </svg>
       ),
     },
@@ -59,7 +58,7 @@ export const ELEVEN: NBlock = {
         <svg>
           <TenBlock />
           <OneBlock x={100} />
-          <Grid block={TenBlock} y={100} width={3} height={3} />
+          <TenGrid y={100} width={3} height={3} />
         </svg>
       ),
     },
@@ -69,7 +68,7 @@ export const ELEVEN: NBlock = {
       height: 500,
       svg: () => (
         <svg>
-          <Grid block={TenBlock} width={2} height={5} />
+          <TenGrid width={2} height={5} />
           <OneBlock x={200} y={400} />
         </svg>
       ),

@@ -1,13 +1,12 @@
 import * as Color from 'color'
-import { createBlock } from './Block'
-import Grid from './Grid'
-import NBlock from './NBlock'
+import { createBlock, createGrid, NBlock } from './common'
 
 export const FOUR_COLORS = {
   primary: new Color('#46CD2E'),
 }
 
 export const FourBlock = createBlock(FOUR_COLORS.primary)
+export const FourGrid = createGrid(FourBlock)
 
 export const FOUR: NBlock = {
   number: 4,
@@ -18,7 +17,7 @@ export const FOUR: NBlock = {
       height: 200,
       svg: () => (
         <svg>
-          <Grid block={FourBlock} width={2} height={2} />
+          <FourGrid width={2} height={2} />
         </svg>
       ),
     },
@@ -28,7 +27,7 @@ export const FOUR: NBlock = {
       height: 400,
       svg: () => (
         <svg>
-        <Grid block={FourBlock} height={4} />
+        <FourGrid height={4} />
         </svg>
       ),
     },
@@ -38,7 +37,7 @@ export const FOUR: NBlock = {
       height: 300,
       svg: () => (
         <svg>
-          <Grid block={FourBlock} height={3} />
+          <FourGrid height={3} />
           <FourBlock x={100} y={200} />
         </svg>
       ),
@@ -49,7 +48,7 @@ export const FOUR: NBlock = {
       height: 200,
       svg: () => (
         <svg>
-          <Grid block={FourBlock} width={3} />
+          <FourGrid width={3} />
           <FourBlock x={100} y={100} />
         </svg>
       ),
@@ -60,8 +59,8 @@ export const FOUR: NBlock = {
       height: 300,
       svg: () => (
         <svg>
-          <Grid block={FourBlock} height={2} />
-          <Grid block={FourBlock} x={100} y={100} height={2} />
+          <FourGrid height={2} />
+          <FourGrid x={100} y={100} height={2} />
         </svg>
       ),
     },
@@ -71,7 +70,7 @@ export const FOUR: NBlock = {
       height: 100,
       svg: () => (
         <svg>
-        <Grid block={FourBlock} width={4} />
+        <FourGrid width={4} />
         </svg>
       ),
     },

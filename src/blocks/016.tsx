@@ -1,7 +1,6 @@
-import Grid from './Grid'
-import NBlock from './NBlock'
-import { SixBlock } from './006'
-import { TenBlock } from './010'
+import { NBlock } from './common'
+import { SixGrid } from './006'
+import { TenGrid } from './010'
 
 export const SIXTEEN: NBlock = {
   number: 16,
@@ -12,9 +11,9 @@ export const SIXTEEN: NBlock = {
       height: 400,
       svg: () => (
         <svg>
-          <Grid block={TenBlock} width={4} height={3} />
-          <Grid block={SixBlock} x={100} y={200} width={2} />
-          <Grid block={SixBlock} y={300} width={4} />
+          <TenGrid width={4} height={3} />
+          <SixGrid x={100} y={200} width={2} />
+          <SixGrid y={300} width={4} />
         </svg>
       ),
     },
@@ -24,8 +23,8 @@ export const SIXTEEN: NBlock = {
       height: 800,
       svg: () => (
         <svg>
-          <Grid block={SixBlock} width={2} height={3} />
-          <Grid block={TenBlock} y={300} width={2} height={5} />
+          <SixGrid width={2} height={3} />
+          <TenGrid y={300} width={2} height={5} />
         </svg>
       ),
     },
@@ -35,8 +34,8 @@ export const SIXTEEN: NBlock = {
       height: 1000,
       svg: () => (
         <svg>
-          <Grid block={TenBlock} height={10} />
-          <Grid block={SixBlock} x={100} y={400} height={6} />
+          <TenGrid height={10} />
+          <SixGrid x={100} y={400} height={6} />
         </svg>
       ),
     },
@@ -46,8 +45,8 @@ export const SIXTEEN: NBlock = {
       height: 600,
       svg: () => (
         <svg>
-          <Grid block={SixBlock} width={4} height={2} />
-          <Grid block={TenBlock} x={100} y={100} width={2} height={5} />
+          <SixGrid width={4} height={2} />
+          <TenGrid x={100} y={100} width={2} height={5} />
         </svg>
       ),
     },
@@ -57,9 +56,9 @@ export const SIXTEEN: NBlock = {
       height: 500,
       svg: () => (
         <svg>
-          <Grid block={TenBlock} y={100} width={2} height={3} />
-          <Grid block={TenBlock} x={100} y={200} width={2} height={3} />
-          <Grid block={SixBlock} x={300} width={2} height={3} />
+          <TenGrid y={100} width={2} height={3} />
+          <TenGrid x={100} y={200} width={2} height={3} />
+          <SixGrid x={300} width={2} height={3} />
         </svg>
       ),
     },
@@ -69,11 +68,11 @@ export const SIXTEEN: NBlock = {
       height: 400,
       svg: () => (
         <svg>
-          <Grid block={TenBlock} width={3} />
-          <Grid block={SixBlock} x={500} width={3} />
-          <Grid block={TenBlock} x={100} y={100} width={3} />
-          <Grid block={SixBlock} x={400} y={100} width={3} />
-          <Grid block={TenBlock} x={300} y={200} width={2} height={2} />
+          <TenGrid width={3} />
+          <SixGrid x={500} width={3} />
+          <TenGrid x={100} y={100} width={3} />
+          <SixGrid x={400} y={100} width={3} />
+          <TenGrid x={300} y={200} width={2} height={2} />
         </svg>
       ),
     },
@@ -83,9 +82,9 @@ export const SIXTEEN: NBlock = {
       height: 500,
       svg: () => (
         <svg>
-          <Grid block={TenBlock} x={100} width={4} />
-          <Grid block={TenBlock} y={100} width={6} />
-          <Grid block={SixBlock} x={200} y={200} width={2} height={3} />
+          <TenGrid x={100} width={4} />
+          <TenGrid y={100} width={6} />
+          <SixGrid x={200} y={200} width={2} height={3} />
         </svg>
       ),
     },

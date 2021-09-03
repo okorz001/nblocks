@@ -1,13 +1,12 @@
 import * as Color from 'color'
-import { createBlock } from './Block'
-import Grid from './Grid'
-import NBlock from './NBlock'
+import { createBlock, createGrid, NBlock } from './common'
 
 export const FIVE_COLORS = {
   primary: new Color('#2AACC7'),
 }
 
 export const FiveBlock = createBlock(FIVE_COLORS.primary)
+export const FiveGrid = createGrid(FiveBlock)
 
 export const FIVE: NBlock = {
   number: 5,
@@ -18,7 +17,7 @@ export const FIVE: NBlock = {
       height: 500,
       svg: () => (
         <svg>
-          <Grid block={FiveBlock} height={5} />
+          <FiveGrid height={5} />
         </svg>
       ),
     },
@@ -29,7 +28,7 @@ export const FIVE: NBlock = {
       svg: () => (
         <svg>
           <FiveBlock x={100} />
-          <Grid block={FiveBlock} y={100} width={2} height={2} />
+          <FiveGrid y={100} width={2} height={2} />
         </svg>
       ),
     },
@@ -39,7 +38,7 @@ export const FIVE: NBlock = {
       height: 400,
       svg: () => (
         <svg>
-          <Grid block={FiveBlock} height={4} />
+          <FiveGrid height={4} />
           <FiveBlock x={100} />
         </svg>
       ),
@@ -50,8 +49,8 @@ export const FIVE: NBlock = {
       height: 300,
       svg: () => (
         <svg>
-          <Grid block={FiveBlock} x={100} height={3} />
-          <Grid block={FiveBlock} y={100} width={3} />
+          <FiveGrid x={100} height={3} />
+          <FiveGrid y={100} width={3} />
         </svg>
       ),
     },
@@ -61,7 +60,7 @@ export const FIVE: NBlock = {
       height: 300,
       svg: () => (
         <svg>
-          <Grid block={FiveBlock} height={3} />
+          <FiveGrid height={3} />
           <FiveBlock x={100} />
           <FiveBlock x={100} y={200} />
         </svg>
@@ -73,8 +72,8 @@ export const FIVE: NBlock = {
       height: 300,
       svg: () => (
         <svg>
-          <Grid block={FiveBlock} width={3} />
-          <Grid block={FiveBlock} x={100} y={100} height={2} />
+          <FiveGrid width={3} />
+          <FiveGrid x={100} y={100} height={2} />
         </svg>
       ),
     },
@@ -85,7 +84,7 @@ export const FIVE: NBlock = {
       svg: () => (
         <svg>
           <FiveBlock />
-          <Grid block={FiveBlock} x={100} height={3} />
+          <FiveGrid x={100} height={3} />
           <FiveBlock x={200} y={200} />
         </svg>
       ),
@@ -97,7 +96,7 @@ export const FIVE: NBlock = {
       svg: () => (
         <svg>
           <FiveBlock y={100} />
-          <Grid block={FiveBlock} x={100} height={3} />
+          <FiveGrid x={100} height={3} />
           <FiveBlock x={200} />
         </svg>
       ),
@@ -108,8 +107,8 @@ export const FIVE: NBlock = {
       height: 300,
       svg: () => (
         <svg>
-          <Grid block={FiveBlock} width={3} />
-          <Grid block={FiveBlock} x={200} y={100} height={2} />
+          <FiveGrid width={3} />
+          <FiveGrid x={200} y={100} height={2} />
         </svg>
       ),
     },

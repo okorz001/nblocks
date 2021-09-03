@@ -1,7 +1,6 @@
-import Grid from './Grid'
-import NBlock from './NBlock'
-import { FiveBlock } from './005'
-import { TenBlock } from './010'
+import { NBlock } from './common'
+import { FiveBlock, FiveGrid } from './005'
+import { TenBlock, TenGrid } from './010'
 
 export const FIFTEEN: NBlock = {
   number: 15,
@@ -12,10 +11,10 @@ export const FIFTEEN: NBlock = {
       height: 500,
       svg: () => (
         <svg>
-          <Grid block={FiveBlock} x={400} height={5} />
-          <Grid block={TenBlock} x={300} y={100} height={4} />
-          <Grid block={TenBlock} x={200} y={200} height={3} />
-          <Grid block={TenBlock} x={100} y={300} height={2} />
+          <FiveGrid x={400} height={5} />
+          <TenGrid x={300} y={100} height={4} />
+          <TenGrid x={200} y={200} height={3} />
+          <TenGrid x={100} y={300} height={2} />
           <TenBlock y={400}/>
         </svg>
       ),
@@ -26,8 +25,8 @@ export const FIFTEEN: NBlock = {
       height: 500,
       svg: () => (
         <svg>
-          <Grid block={TenBlock} width={2} height={5} />
-          <Grid block={FiveBlock} x={200} height={5} />
+          <TenGrid width={2} height={5} />
+          <FiveGrid x={200} height={5} />
         </svg>
       ),
     },
@@ -38,8 +37,8 @@ export const FIFTEEN: NBlock = {
       svg: () => (
         <svg>
           <FiveBlock x={100} />
-          <Grid block={FiveBlock} y={100} width={2} height={2} />
-          <Grid block={TenBlock} y={300} width={2} height={5} />
+          <FiveGrid y={100} width={2} height={2} />
+          <TenGrid y={300} width={2} height={5} />
         </svg>
       ),
     },
@@ -49,8 +48,8 @@ export const FIFTEEN: NBlock = {
       height: 1000,
       svg: () => (
         <svg>
-          <Grid block={TenBlock} height={10} />
-          <Grid block={FiveBlock} x={100} y={500} height={5} />
+          <TenGrid height={10} />
+          <FiveGrid x={100} y={500} height={5} />
         </svg>
       ),
     },
@@ -61,8 +60,8 @@ export const FIFTEEN: NBlock = {
       svg: () => (
         <svg>
           <TenBlock x={100} />
-          <Grid block={TenBlock} y={100} width={3} height={3} />
-          <Grid block={FiveBlock} x={100} y={400} height={5} />
+          <TenGrid y={100} width={3} height={3} />
+          <FiveGrid x={100} y={400} height={5} />
         </svg>
       ),
     },

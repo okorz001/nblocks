@@ -1,7 +1,6 @@
-import Grid from './Grid'
-import NBlock from './NBlock'
-import { ThreeBlock } from './003'
-import { TenBlock } from './010'
+import { NBlock } from './common'
+import { ThreeBlock, ThreeGrid } from './003'
+import { TenBlock, TenGrid } from './010'
 
 export const THIRTEEN: NBlock = {
   number: 13,
@@ -13,8 +12,8 @@ export const THIRTEEN: NBlock = {
       svg: () => (
         <svg>
           <ThreeBlock x={100} />
-          <Grid block={ThreeBlock} x={200} height={2} />
-          <Grid block={TenBlock} y={100} width={2} height={5} />
+          <ThreeGrid x={200} height={2} />
+          <TenGrid y={100} width={2} height={5} />
         </svg>
       ),
     },
@@ -24,8 +23,8 @@ export const THIRTEEN: NBlock = {
       height: 500,
       svg: () => (
         <svg>
-          <Grid block={TenBlock} width={2} height={5} />
-          <Grid block={ThreeBlock} x={200} y={200} height={3} />
+          <TenGrid width={2} height={5} />
+          <ThreeGrid x={200} y={200} height={3} />
         </svg>
       ),
     },
@@ -36,8 +35,8 @@ export const THIRTEEN: NBlock = {
       svg: () => (
         <svg>
           <TenBlock x={200} />
-          <Grid block={TenBlock} y={100} width={3} height={3} />
-          <Grid block={ThreeBlock} y={400} width={3} />
+          <TenGrid y={100} width={3} height={3} />
+          <ThreeGrid y={400} width={3} />
         </svg>
       ),
     },
@@ -48,8 +47,8 @@ export const THIRTEEN: NBlock = {
       svg: () => (
         <svg>
           <ThreeBlock x={100} />
-          <Grid block={ThreeBlock} y={100} width={2} />
-          <Grid block={TenBlock} y={200} width={2} height={5} />
+          <ThreeGrid y={100} width={2} />
+          <TenGrid y={200} width={2} height={5} />
         </svg>
       ),
     },
@@ -59,8 +58,8 @@ export const THIRTEEN: NBlock = {
       height: 1000,
       svg: () => (
         <svg>
-          <Grid block={TenBlock} height={10} />
-          <Grid block={ThreeBlock} x={100} y={700} height={3} />
+          <TenGrid height={10} />
+          <ThreeGrid x={100} y={700} height={3} />
         </svg>
       ),
     },
@@ -71,8 +70,8 @@ export const THIRTEEN: NBlock = {
       svg: () => (
         <svg>
           <TenBlock y={200} />
-          <Grid block={TenBlock} x={100} width={3} height={3} />
-          <Grid block={ThreeBlock} x={400} height={3} />
+          <TenGrid x={100} width={3} height={3} />
+          <ThreeGrid x={400} height={3} />
         </svg>
       ),
     },
@@ -83,9 +82,9 @@ export const THIRTEEN: NBlock = {
       svg: () => (
         <svg>
           <TenBlock x={300} />
-          <Grid block={TenBlock} y={100} width={4} height={2} />
+          <TenGrid y={100} width={4} height={2} />
           <TenBlock y={300} />
-          <Grid block={ThreeBlock} x={100} y={300} width={3} />
+          <ThreeGrid x={100} y={300} width={3} />
         </svg>
       ),
     },
@@ -96,9 +95,9 @@ export const THIRTEEN: NBlock = {
       svg: () => (
         <svg>
           <ThreeBlock x={300} />
-          <Grid block={ThreeBlock} x={200} y={100} width={2} />
-          <Grid block={TenBlock} y={200} width={4} />
-          <Grid block={TenBlock} x={100} y={300} width={3} height={2} />
+          <ThreeGrid x={200} y={100} width={2} />
+          <TenGrid y={200} width={4} />
+          <TenGrid x={100} y={300} width={3} height={2} />
         </svg>
       ),
     },
@@ -108,9 +107,9 @@ export const THIRTEEN: NBlock = {
       height: 400,
       svg: () => (
         <svg>
-          <Grid block={TenBlock} y={200} height={2} />
-          <Grid block={TenBlock} x={100} height={4} width={2} />
-          <Grid block={ThreeBlock} x={300} height={3} />
+          <TenGrid y={200} height={2} />
+          <TenGrid x={100} height={4} width={2} />
+          <ThreeGrid x={300} height={3} />
         </svg>
       ),
     },
@@ -121,8 +120,8 @@ export const THIRTEEN: NBlock = {
       svg: () => (
         <svg>
           <TenBlock />
-          <Grid block={TenBlock} x={100} width={3} height={4} />
-          <Grid block={ThreeBlock} x={200} width={2} />
+          <TenGrid x={100} width={3} height={4} />
+          <ThreeGrid x={200} width={2} />
           <ThreeBlock x={300} y={100} />
         </svg>
       ),

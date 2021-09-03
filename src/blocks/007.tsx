@@ -1,6 +1,5 @@
 import * as Color from 'color'
-import { createBlock } from './Block'
-import NBlock from './NBlock'
+import { createBlock, NBlock } from './common'
 
 import { OneBlock } from './001'
 import { TwoBlock } from './002'

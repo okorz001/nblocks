@@ -1,4 +1,4 @@
-import NBlock from './NBlock'
+import { NBlock } from './common'
 
 import ONE from './001'
 import TWO from './002'

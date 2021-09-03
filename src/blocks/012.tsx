@@ -1,7 +1,6 @@
-import Grid from './Grid'
-import NBlock from './NBlock'
-import { TwoBlock } from './002'
-import { TenBlock } from './010'
+import { NBlock } from './common'
+import { TwoGrid } from './002'
+import { TenGrid } from './010'
 
 export const TWELVE: NBlock = {
   number: 12,
@@ -12,8 +11,8 @@ export const TWELVE: NBlock = {
       height: 400,
       svg: () => (
         <svg>
-          <Grid block={TenBlock} width={3} height={4} />
-          <Grid block={TwoBlock} x={100} y={100} height={2} />
+          <TenGrid width={3} height={4} />
+          <TwoGrid x={100} y={100} height={2} />
         </svg>
       ),
     },
@@ -23,8 +22,8 @@ export const TWELVE: NBlock = {
       height: 600,
       svg: () => (
         <svg>
-          <Grid block={TwoBlock} width={2} />
-          <Grid block={TenBlock} y={100} width={2} height={5} />
+          <TwoGrid width={2} />
+          <TenGrid y={100} width={2} height={5} />
         </svg>
       ),
     },
@@ -34,8 +33,8 @@ export const TWELVE: NBlock = {
       height: 1000,
       svg: () => (
         <svg>
-          <Grid block={TenBlock} height={10} />
-          <Grid block={TwoBlock} x={100} y={800} height={2} />
+          <TenGrid height={10} />
+          <TwoGrid x={100} y={800} height={2} />
         </svg>
       ),
     },
@@ -45,10 +44,10 @@ export const TWELVE: NBlock = {
       height: 400,
       svg: () => (
         <svg>
-          <Grid block={TenBlock} height={4} />
-          <Grid block={TwoBlock} x={100} width={2} />
-          <Grid block={TenBlock} x={100} y={300} width={2} />
-          <Grid block={TenBlock} x={300} height={4} />
+          <TenGrid height={4} />
+          <TwoGrid x={100} width={2} />
+          <TenGrid x={100} y={300} width={2} />
+          <TenGrid x={300} height={4} />
         </svg>
       ),
     },
@@ -58,8 +57,8 @@ export const TWELVE: NBlock = {
       height: 500,
       svg: () => (
         <svg>
-          <Grid block={TenBlock} width={2} height={5} />
-          <Grid block={TwoBlock} x={200} y={300} height={2} />
+          <TenGrid width={2} height={5} />
+          <TwoGrid x={200} y={300} height={2} />
         </svg>
       ),
     },
