@@ -38,6 +38,19 @@ export const FOURTEEN: NBlock = {
         </svg>
       ),
     },
+    // one-horn
+    {
+      width: 500,
+      height: 800,
+      svg: () => (
+        <svg>
+          <TenGrid x={200} height={200} />
+          <TenGrid y={200} width={5} />
+          <TenGrid x={100} y={300} width={3} />
+          <FourGrid x={200} y={400} height={4} />
+        </svg>
+      ),
+    },
   ],
 }
 

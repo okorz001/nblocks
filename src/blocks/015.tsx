@@ -65,6 +65,20 @@ export const FIFTEEN: NBlock = {
         </svg>
       ),
     },
+    // two-horn
+    {
+      width: 500,
+      height: 800,
+      svg: () => (
+        <svg>
+          <TenBlock x={100} />
+          <TenBlock x={300} />
+          <TenGrid x={100} y={100} width={3} />
+          <TenGrid y={200} width={5} />
+          <FiveGrid x={200} y={300} height={5} />
+        </svg>
+      ),
+    },
   ],
 }
 

@@ -62,6 +62,19 @@ export const TWELVE: NBlock = {
         </svg>
       ),
     },
+    // moose
+    {
+      width: 600,
+      height: 400,
+      svg: () => (
+        <svg>
+          <TenGrid x={100} height={2} />
+          <TenGrid x={400} height={2} />
+          <TenGrid y={200} width={6} />
+          <TwoGrid x={200} y={300} width={2} />
+        </svg>
+      ),
+    },
   ],
 }
 

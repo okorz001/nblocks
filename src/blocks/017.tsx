@@ -46,6 +46,42 @@ export const SEVENTEEN: NBlock = {
         </svg>
       ),
     },
+    // odd
+    {
+      width: 200,
+      height: 900,
+      svg: () => (
+        <svg>
+          <FiveBlock y={100} />
+          <ThreeBlock y={200} />
+          <OneBlock y={300} />
+          <SevenBlock x={100} />
+          <SixBlock x={100} y={100} />
+          <FourBlock x={100} y={200} />
+          <TwoBlock x={100} y={300} />
+          <TenGrid y={400} width={2} height={5} />
+        </svg>
+      ),
+    },
+    // antenna
+    {
+      width: 500,
+      height: 800,
+      svg: () => (
+        <svg>
+          <SevenBlock x={100} />
+          <OneBlock y={100} />
+          <ThreeBlock x={100} y={100} />
+          <FourBlock x={200} y={100} />
+          <FiveBlock x={300} y={100} />
+          <SixBlock x={400} y={100} />
+          <TwoBlock x={100} y={200} />
+          <TenGrid y={300} width={4} />
+          <TenGrid x={100} y={300} height={4} />
+          <TenGrid y={500} width={3} />
+        </svg>
+      ),
+    },
   ],
 }
 
