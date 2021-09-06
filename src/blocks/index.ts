@@ -31,6 +31,7 @@ import SIXTY from './060'
 import SEVENTY from './070'
 import EIGHTY from './080'
 import NINETY from './090'
+import ONE_HUNDRED from './100'
 
 export const NBLOCKS: NBlock[] = [
   ONE,
@@ -64,6 +65,7 @@ export const NBLOCKS: NBlock[] = [
   SEVENTY,
   EIGHTY,
   NINETY,
+  ONE_HUNDRED,
 ]
 
 export default NBLOCKS

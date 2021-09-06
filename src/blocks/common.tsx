@@ -36,6 +36,7 @@ export function createBlock(namePrefix: string, color: Color): React.FC<BlockPro
 
 export interface GridProps {
   block?: typeof Block
+  blockSize?: number
   x?: number
   y?: number
   width?: number
@@ -45,6 +46,7 @@ export interface GridProps {
 export const Grid: React.FC<GridProps> = (props) => {
   const blocks: React.ReactNode[] = []
   const GridBlock = props.block || Block
+  const blockSize = props.blockSize || 100
   const x = props.x || 0
   const y = props.y || 0
   const width = props.width || 1
@@ -53,15 +55,15 @@ export const Grid: React.FC<GridProps> = (props) => {
   for (let i = 0; i < width; i++) {
     for (let j = 0; j < height; j++) {
       blocks.push(
-        <GridBlock key={key++} x={x + i * 100} y={y + j * 100} />
+        <GridBlock key={key++} x={x + i * blockSize} y={y + j * blockSize} />
       )
     }
   }
   return <svg children={blocks} />
 }
 
-export function createGrid(namePrefix: string, block: typeof Block): React.FC<GridProps> {
-  return withDisplayName(namePrefix + 'Grid', (props) => <Grid block={block} {...props} />)
+export function createGrid(namePrefix: string, block: typeof Block, blockSize?: number): React.FC<GridProps> {
+  return withDisplayName(namePrefix + 'Grid', (props) => <Grid block={block} blockSize={blockSize} {...props} />)
 }
 
 export interface Form {
