@@ -21,6 +21,47 @@ export const EIGHTY: NBlock = {
         </svg>
       ),
     },
+    // man
+    {
+      width: 1000,
+      height: 1600,
+      svg: () => (
+        <svg>
+          <EightyGrid x={400} width={2} height={12} />
+          <EightyGrid x={300} y={100} width={4} />
+          <EightyGrid y={300} width={10} />
+          <EightyGrid y={400} height={7} />
+          <EightyGrid x={200} y={400} width={6} height={4} />
+          <EightyGrid x={900} y={400} height={7} />
+          <EightyGrid x={300} y={1000} height={6} />
+          <EightyGrid x={600} y={1000} height={6} />
+          <EightyGrid x={200} y={1400} height={2} />
+          <EightyGrid x={700} y={1400} height={2} />
+        </svg>
+      ),
+    },
+    // dino
+    {
+      width: 1600,
+      height: 1500,
+      svg: () => (
+        <svg>
+          <EightyGrid x={1100} width={5} />
+          <EightyGrid x={1100} y={100} width={2} />
+          <EightyGrid x={1100} y={200} width={5} />
+          <EightyGrid x={1100} y={300} width={3} height={2} />
+          <EightyGrid x={1000} y={500} width={4} height={2} />
+          <EightyGrid x={900} y={700} width={7} />
+          <EightyGrid x={800} y={800} width={6} />
+          <EightyGrid x={600} y={900} width={10} />
+          <EightyGrid y={1000} width={14} />
+          <EightyGrid x={700} y={1100} width={7} />
+          <EightyGrid x={800} y={1200} width={6} />
+          <EightyGrid x={900} y={1300} height={2} />
+          <EightyGrid x={1300} y={1300} height={2} />
+        </svg>
+      ),
+    },
   ],
 }
 
