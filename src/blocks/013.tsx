@@ -126,6 +126,19 @@ export const THIRTEEN: NBlock = {
         </svg>
       ),
     },
+    // +
+    {
+      width: 700,
+      height: 700,
+      svg: () => (
+        <svg>
+          <ThreeGrid x={300} height={3} />
+          <TenGrid y={300} width={7} />
+          <TenGrid x={300} y={400} height={3} />
+        </svg>
+      ),
+    },
+
   ],
 }
 

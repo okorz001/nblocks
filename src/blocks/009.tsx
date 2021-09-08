@@ -99,6 +99,20 @@ export const NINE: NBlock = {
         </svg>
       ),
     },
+    // +
+    {
+      width: 500,
+      height: 500,
+      svg: () => (
+        <svg>
+          <NineDarkGrid y={200} width={5} />
+          <NineMediumGrid x={100} y={200} width={3} />
+          <NineDarkBlock x={200} />
+          <NineMediumBlock x={200} y={100} />
+          <NineLightGrid x={200} y={200} height={3} />
+        </svg>
+      ),
+    },
   ],
 }
 

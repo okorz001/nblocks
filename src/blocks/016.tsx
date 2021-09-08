@@ -1,5 +1,5 @@
 import { NBlock } from './common'
-import { SixGrid } from './006'
+import { SixBlock, SixGrid } from './006'
 import { TenGrid } from './010'
 
 export const SIXTEEN: NBlock = {
@@ -85,6 +85,20 @@ export const SIXTEEN: NBlock = {
           <TenGrid x={100} width={4} />
           <TenGrid y={100} width={6} />
           <SixGrid x={200} y={200} width={2} height={3} />
+        </svg>
+      ),
+    },
+    // pac-man ghost
+    {
+      width: 400,
+      height: 500,
+      svg: () => (
+        <svg>
+          <TenGrid x={100} width={2} />
+          <TenGrid y={100} width={4} height={2} />
+          <SixGrid y={300} width={4} />
+          <SixBlock y={400} />
+          <SixBlock x={200} y={400} />
         </svg>
       ),
     },

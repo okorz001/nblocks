@@ -162,6 +162,43 @@ export const EIGHT: NBlock = {
         </svg>
       ),
     },
+    // check mark
+    {
+      width: 300,
+      height: 600,
+      svg: () => (
+        <svg>
+          <EightGrid x={200} height={6} />
+          <EightGrid y={500} width={2} />
+        </svg>
+      ),
+    },
+    // 2
+    {
+      width: 200,
+      height: 500,
+      svg: () => (
+        <svg>
+          <EightBlock />
+          <EightGrid x={100} height={3} />
+          <EightGrid y={200} height={3} />
+          <EightBlock x={100} y={400} />
+        </svg>
+      ),
+    },
+    // C / pac-man
+    {
+      width: 300,
+      height: 400,
+      svg: () => (
+        <svg>
+          <EightBlock x={100} />
+          <EightGrid y={100} width={3} />
+          <EightBlock y={200} />
+          <EightGrid y={300} width={3} />
+        </svg>
+      ),
+    },
   ],
 }
 
