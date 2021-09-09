@@ -1,18 +1,19 @@
 import { NBlock } from './common'
-import { FiveBlock, FiveGrid } from './005'
+import { SixGrid } from './006'
 import { TwentyGrid } from './020'
 
-export const TWENTY_FIVE: NBlock = {
-  number: 25,
+export const TWENTY_SIX: NBlock = {
+  number: 26,
   forms: [
-    // square
+    // suit ???
     {
-      width: 500,
-      height: 500,
+      width: 400,
+      height: 700,
       svg: () => (
         <svg>
-          <TwentyGrid width={5} height={4} />
-          <FiveGrid y={400} width={5} />
+          <SixGrid y={500} width={4} height={2} />
+          <TwentyGrid y={100} width={4} height={4} />
+          <TwentyGrid x={100} width={2} height={6} />
         </svg>
       ),
     },
@@ -23,18 +24,17 @@ export const TWENTY_FIVE: NBlock = {
       svg: () => (
         <svg>
           <TwentyGrid width={2} height={10} />
-          <FiveGrid x={200} y={500} height={5} />
+          <SixGrid x={200} y={400} height={6} />
         </svg>
       ),
     },
-    // odd
+    // even
     {
-      width: 300,
+      width: 200,
       height: 1300,
       svg: () => (
         <svg>
-          <FiveBlock x={100} />
-          <FiveGrid y={100} width={2} height={2} />
+          <SixGrid width={2} height={3} />
           <TwentyGrid y={300} width={2} height={10} />
         </svg>
       ),
@@ -42,4 +42,4 @@ export const TWENTY_FIVE: NBlock = {
   ],
 }
 
-export default TWENTY_FIVE
+export default TWENTY_SIX

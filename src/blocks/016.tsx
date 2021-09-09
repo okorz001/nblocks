@@ -102,6 +102,20 @@ export const SIXTEEN: NBlock = {
         </svg>
       ),
     },
+    // O
+    {
+      width: 500,
+      height: 500,
+      svg: () => (
+        <svg>
+          <SixGrid width={5} />
+          <SixBlock y={100} />
+          <TenGrid x={400} y={100} height={3} />
+          <TenGrid y={200} height={2} />
+          <TenGrid y={400} width={5} />
+        </svg>
+      ),
+    },
   ],
 }
 

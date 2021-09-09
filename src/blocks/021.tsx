@@ -68,6 +68,22 @@ export const TWENTY_ONE: NBlock = {
         </svg>
       ),
     },
+    // jack-o-lantern
+    {
+      width: 500,
+      height: 600,
+      svg: () => (
+        <svg>
+          <TwentyGrid x={200} height={3} />
+          <TwentyGrid y={100} width={5} />
+          <TwentyGrid y={200} height={3} />
+          <TwentyGrid x={400} y={200} height={3} />
+          <TwentyGrid y={300} width={5} />
+          <OneBlock x={200} y={300} />
+          <TwentyGrid y={500} width={5} />
+        </svg>
+      ),
+    },
   ],
 }
 

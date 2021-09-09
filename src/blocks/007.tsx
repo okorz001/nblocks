@@ -1,6 +1,5 @@
 import * as Color from 'color'
 import { createBlock, NBlock } from './common'
-
 import { OneBlock } from './001'
 import { TwoBlock } from './002'
 import { ThreeBlock } from './003'

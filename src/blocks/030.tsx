@@ -21,6 +21,27 @@ export const THIRTY: NBlock = {
         </svg>
       ),
     },
+    // even
+    {
+      width: 200,
+      height: 1500,
+      svg: () => (
+        <svg>
+          <ThirtyGrid width={2} height={15} />
+        </svg>
+      ),
+    },
+    // calendar
+    {
+      width: 700,
+      height: 500,
+      svg: () => (
+        <svg>
+          <ThirtyGrid width={7} height={4} />
+          <ThirtyGrid y={400} width={2} />
+        </svg>
+      ),
+    },
   ],
 }
 
