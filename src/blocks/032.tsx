@@ -27,6 +27,20 @@ export const THIRTY_TWO: NBlock = {
         </svg>
       ),
     },
+    // O
+    {
+      width: 900,
+      height: 900,
+      svg: () => (
+        <svg>
+          <ThirtyGrid width={9} />
+          <TwoGrid x={400} width={2} />
+          <ThirtyGrid y={100} height={7} />
+          <ThirtyGrid x={800} y={100} height={7} />
+          <ThirtyGrid y={800} width={9} />
+        </svg>
+      ),
+    },
   ],
 }
 

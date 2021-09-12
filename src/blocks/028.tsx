@@ -57,6 +57,23 @@ export const TWENTY_EIGHT: NBlock = {
         </svg>
       ),
     },
+    // step
+    {
+      width: 700,
+      height: 700,
+      svg: () => (
+        <svg>
+          <TwentyBlock y={600} />
+          <TwentyGrid x={100} y={500} height={2} />
+          <TwentyGrid x={200} y={400} height={3} />
+          <TwentyGrid x={300} y={300} height={4} />
+          <TwentyGrid x={400} y={200} height={5} />
+          <TwentyGrid x={500} y={100} height={5} />
+          <EightBlock x={500} y={600} />
+          <EightGrid x={600} height={7} />
+        </svg>
+      ),
+    },
     // O
     {
       width: 800,

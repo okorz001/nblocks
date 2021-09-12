@@ -1,6 +1,6 @@
 import { NBlock } from './common'
 import { SixBlock, SixGrid } from './006'
-import { TenGrid } from './010'
+import { TenBlock, TenGrid } from './010'
 
 export const SIXTEEN: NBlock = {
   number: 16,
@@ -113,6 +113,22 @@ export const SIXTEEN: NBlock = {
           <TenGrid x={400} y={100} height={3} />
           <TenGrid y={200} height={2} />
           <TenGrid y={400} width={5} />
+        </svg>
+      ),
+    },
+    // triangle
+    {
+      width: 700,
+      height: 400,
+      svg: () => (
+        <svg>
+          <TenBlock y={300} />
+          <TenGrid x={100} y={200} height={2} />
+          <TenGrid x={200} y={100} height={3} />
+          <TenGrid x={300} height={4} />
+          <SixGrid x={400} y={100} height={3} />
+          <SixGrid x={500} y={200} height={2} />
+          <SixBlock x={600} y={300} />
         </svg>
       ),
     },

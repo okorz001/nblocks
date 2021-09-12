@@ -62,6 +62,43 @@ export const EIGHTY: NBlock = {
         </svg>
       ),
     },
+    // spider
+    {
+      width: 1200,
+      height: 1700,
+      svg: () => (
+        <svg>
+          <EightyGrid x={200} width={2} />
+          <EightyGrid x={800} width={2} />
+          <EightyGrid x={200} y={100} height={3} />
+          <EightyGrid x={900} y={100} height={3} />
+          <EightyGrid y={300} height={3} />
+          <EightyGrid x={500} y={300} width={2} height={8} />
+          <EightyGrid x={1100} y={300} height={3} />
+          <EightyGrid x={200} y={400} width={8} />
+          <EightyGrid y={600} width={12} />
+          <EightyGrid x={100} y={800} width={10} />
+          <EightyGrid x={100} y={900} height={4} />
+          <EightyGrid x={1000} y={900} height={4} />
+          <EightyGrid x={300} y={1000} width={6} />
+          <EightyGrid x={300} y={1100} height={7} />
+          <EightyGrid x={800} y={1100} height={7} />
+        </svg>
+      ),
+    },
+    // O
+    {
+      width: 900,
+      height: 900,
+      svg: () => (
+        <svg>
+          <EightyGrid width={9} height={4} />
+          <EightyGrid y={400} width={4} />
+          <EightyGrid x={500} y={400} width={4} />
+          <EightyGrid y={500} width={9} height={4} />
+        </svg>
+      ),
+    },
   ],
 }
 

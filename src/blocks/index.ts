@@ -32,11 +32,18 @@ import TWENTY_NINE from './029'
 import THIRTY from './030'
 import THIRTY_ONE from './031'
 import THIRTY_TWO from './032'
+import THIRTY_FIVE from './035'
+import THIRTY_SIX from './036'
 import FORTY from './040'
+import FORTY_FIVE from './045'
+import FORTY_NINE from './049'
 import FIFTY from './050'
+import FIFTY_FIVE from './055'
 import SIXTY from './060'
+import SIXTY_FOUR from './064'
 import SEVENTY from './070'
 import EIGHTY from './080'
+import EIGHTY_ONE from './081'
 import NINETY from './090'
 import ONE_HUNDRED from './100'
 
@@ -73,11 +80,18 @@ export const NBLOCKS: NBlock[] = [
   THIRTY,
   THIRTY_ONE,
   THIRTY_TWO,
+  THIRTY_FIVE,
+  THIRTY_SIX,
   FORTY,
+  FORTY_FIVE,
+  FORTY_NINE,
   FIFTY,
+  FIFTY_FIVE,
   SIXTY,
+  SIXTY_FOUR,
   SEVENTY,
   EIGHTY,
+  EIGHTY_ONE,
   NINETY,
   ONE_HUNDRED,
 ]

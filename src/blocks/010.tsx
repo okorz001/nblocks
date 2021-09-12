@@ -152,6 +152,20 @@ export const TEN: NBlock = {
         </svg>
       ),
     },
+    // seahorse
+    {
+      width: 400,
+      height: 500,
+      svg: () => (
+        <svg>
+          <TenGrid x={100} width={3} />
+          <TenBlock x={300} y={100} />
+          <TenGrid x={100} y={200} width={3} />
+          <TenBlock x={100} y={300} />
+          <TenGrid y={400} width={2} />
+        </svg>
+      ),
+    },
   ],
 }
 

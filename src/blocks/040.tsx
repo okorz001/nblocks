@@ -32,6 +32,16 @@ export const FORTY: NBlock = {
         </svg>
       ),
     },
+    // 8x5
+    {
+      width: 800,
+      height: 500,
+      svg: () => (
+        <svg>
+          <FortyGrid width={8} height={5} />
+        </svg>
+      ),
+    },
   ],
 }
 

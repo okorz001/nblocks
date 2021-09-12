@@ -1,6 +1,6 @@
 import { NBlock } from './common'
 import { FiveBlock, FiveGrid } from './005'
-import { TwentyGrid } from './020'
+import { TwentyBlock, TwentyGrid } from './020'
 
 export const TWENTY_FIVE: NBlock = {
   number: 25,
@@ -36,6 +36,21 @@ export const TWENTY_FIVE: NBlock = {
           <FiveBlock x={100} />
           <FiveGrid y={100} width={2} height={2} />
           <TwentyGrid y={300} width={2} height={10} />
+        </svg>
+      ),
+    },
+    // triangle
+    {
+      width: 900,
+      height: 500,
+      svg: () => (
+        <svg>
+          <TwentyBlock x={400} />
+          <TwentyGrid x={300} y={100} width={3} />
+          <TwentyGrid x={200} y={200} width={5} />
+          <TwentyGrid x={100} y={300} width={7} />
+          <FiveGrid y={400} width={5} />
+          <TwentyGrid x={500} y={400} width={4} />
         </svg>
       ),
     },

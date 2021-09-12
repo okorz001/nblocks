@@ -42,6 +42,16 @@ export const THIRTY: NBlock = {
         </svg>
       ),
     },
+    // 6x5
+    {
+      width: 600,
+      height: 500,
+      svg: () => (
+        <svg>
+          <ThirtyGrid width={6} height={5} />
+        </svg>
+      ),
+    },
   ],
 }
 

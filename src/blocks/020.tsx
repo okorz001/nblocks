@@ -31,6 +31,19 @@ export const TWENTY: NBlock = {
         </svg>
       ),
     },
+    // O
+    {
+      width: 600,
+      height: 600,
+      svg: () => (
+        <svg>
+          <TwentyGrid width={6} />
+          <TwentyGrid y={100} height={4} />
+          <TwentyGrid x={500} y={100} height={4} />
+          <TwentyGrid y={500} width={6} />
+        </svg>
+      ),
+    },
   ],
 }
 

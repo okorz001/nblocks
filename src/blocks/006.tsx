@@ -124,6 +124,41 @@ export const SIX: NBlock = {
         </svg>
       ),
     },
+    // 7
+    {
+      width: 200,
+      height: 500,
+      svg: () => (
+        <svg>
+          <SixBlock />
+          <SixGrid x={100} height={5} />
+        </svg>
+      ),
+    },
+    // split plus
+    {
+      width: 300,
+      height: 400,
+      svg: () => (
+        <svg>
+          <SixBlock y={100} />
+          <SixGrid x={100} height={4} />
+          <SixBlock x={200} y={200} />
+        </svg>
+      ),
+    },
+    // upside down F
+    {
+      width: 200,
+      height: 400,
+      svg: () => (
+        <svg>
+          <SixGrid height={4} />
+          <SixBlock x={100} y={100} />
+          <SixBlock x={100} y={300} />
+        </svg>
+      ),
+    },
   ],
 }
 
