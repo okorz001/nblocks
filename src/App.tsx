@@ -1,32 +1,29 @@
-import { useState } from 'react'
-import { createUseStyles } from 'react-jss'
-import NBLOCKS from './blocks'
-import Button from './Button'
+import { Box, CssBaseline } from '@mui/material'
+import DarkMode from './DarkMode'
 import Gallery from './Gallery'
+import ServiceWorker from './ServiceWorker'
+import TopBar from './TopBar'
 
-const useStyles = createUseStyles({
-  app: {
-    width: '100%',
-    height: '100%',
-    display: 'flex',
-    flexFlow: 'row nowrap',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-})
-
-export const App = () => {
-  const classes = useStyles()
-  const [number, setNumber] = useState(0)
-  const decrement = () => { setNumber(number - 1) }
-  const increment = () => { setNumber(number + 1) }
+export default function App() {
   return (
-    <div className={classes.app}>
-      <Button label={"−"} onClick={decrement} disabled={number == 0}/>
-      <Gallery number={number}/>
-      <Button label={"+"} onClick={increment} disabled={number == NBLOCKS.length - 1}/>
-    </div>
+    <ServiceWorker script="/service-worker.js">
+      <DarkMode>
+        <CssBaseline />
+        <Box sx={{
+          // fullscreen
+          width: '100vw',
+          height: '100vh',
+          display: 'flex',
+          flexFlow: 'column nowrap',
+        }}>
+          <TopBar />
+          <Gallery sx={{
+            // fill remaining space under topbar, but do not overflow
+            flex: 'auto',
+            minHeight: '0',
+          }} />
+        </Box>
+      </DarkMode>
+    </ServiceWorker>
   )
 }
-
-export default App

@@ -1,5 +1,3 @@
-import { createUseStyles } from 'react-jss'
-
 interface SvgCanvasProps {
   x?: number,
   y?: number,
@@ -8,22 +6,18 @@ interface SvgCanvasProps {
   scale?: number,
 }
 
-type SvgCanvasRules = 'canvas'
-
-const useStyles = createUseStyles<SvgCanvasRules, SvgCanvasProps>({
-  canvas: {
-    maxWidth: props => (props.scale || 1) * props.width,
-    maxHeight: props => (props.scale || 1) * props.height,
-    width: '100%',
-    height: '100%',
-  },
-})
-
 const SvgCanvas: React.FC<SvgCanvasProps> = (props) => {
-  const classes = useStyles(props)
-  const viewBox = `${props.x || 0} ${props.y || 0} ${props.width} ${props.height}`
   return (
-    <svg className={classes.canvas} viewBox={viewBox} preserveAspectRatio="xMidYMid meet">
+    <svg
+      viewBox={`${props.x || 0} ${props.y || 0} ${props.width} ${props.height}`}
+      preserveAspectRatio="xMidYMid meet"
+      css={{
+        width: '100%',
+        height: '100%',
+        maxWidth: (props.scale || 1) * props.width,
+        maxHeight: (props.scale || 1) * props.height,
+      }}
+    >
       {props.children}
     </svg>
   )
