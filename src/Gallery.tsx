@@ -1,5 +1,5 @@
 import { ArrowBack, ArrowForward, Transform as TransformIcon } from '@mui/icons-material'
-import { Box, Divider, IconButton, Stack, Tooltip } from '@mui/material'
+import { Box, Divider, IconButton, Stack, Tooltip, useMediaQuery } from '@mui/material'
 import { SxProps } from '@mui/system'
 import { useState } from 'react'
 import NBLOCKS from './blocks'
@@ -29,13 +29,18 @@ export default function Gallery(props: {
   // wrap around after reaching end of list
   const nextForm = () => setFormNumber((formNumber + 1) % forms.length)
 
+  // we only want to use landscape layout if the height is too small for regular layout
+  // (orientation: landscape) can be true with huge viewports which is not desirable
+  // this is a heuristic for a rotated phone -- 480px is a rough upper bound for mobile phone width
+  const isLandscape = useMediaQuery('(max-height: 480px) and (min-width: 480px)')
+
   return (
     <Box
       sx={{
         ...props.sx,
         // flex
         display: 'flex',
-        flexFlow: 'column nowrap',
+        flexFlow: `${isLandscape ? 'row' : 'column'} nowrap`,
         justifyContent: 'center',
         alignItems: 'center',
       }}
@@ -52,6 +57,10 @@ export default function Gallery(props: {
           flexFlow: 'row nowrap',
           alignItems: 'center',
           justifyContent: 'center',
+          ...(isLandscape ? {
+            // keep content centered despite controls on the right side
+            ml: 8,
+          } : {})
         }}
       >
         <SvgCanvas scale={0.5} width={form.width} height={form.height}>
@@ -60,17 +69,20 @@ export default function Gallery(props: {
       </Box>
 
       <Stack
-        direction="row"
+        direction={isLandscape ? "column" : "row"}
         spacing={1.5}
         sx={{
           bgcolor: ifDarkMode('background.paper', 'primary.main'),
           color: ifDarkMode('text.primary', 'primary.contrastText'),
           borderRadius: 50,
-          mb: 2,
-          pl: 1.5,
-          pr: 1.5,
+          ...(isLandscape ? {
+            mr: 2,
+          } : {
+            mb: 2.5,
+            px: 1.5,
+          })
         }}
-        divider={<Divider orientation="vertical" flexItem />}
+        divider={<Divider orientation={isLandscape? "horizontal" : "vertical"} flexItem />}
       >
         <Tooltip title="Previous">
           <IconButton size="large" color="inherit" onClick={previousBlock} disabled={blockNumber == 0}>
