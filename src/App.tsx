@@ -1,7 +1,6 @@
 import { Box, CssBaseline } from '@mui/material'
 import DarkMode from './DarkMode'
 import Gallery from './Gallery'
-import innerHeight from './inner-height'
 import ServiceWorker from './ServiceWorker'
 import TopBar from './TopBar'
 
@@ -13,7 +12,7 @@ export default function App() {
         <Box sx={{
           // fullscreen
           width: '100vw',
-          height: innerHeight(),
+          height: '100vh',
           display: 'flex',
           flexFlow: 'column nowrap',
         }}>
