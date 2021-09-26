@@ -49,6 +49,7 @@ export default function Gallery() {
       <Box
         sx={{
           flex: 'auto',
+          minHeight: '0px',
           maxWidth: '500px',
           height: `calc(100% - ${2 * PADDING}px)`,
           padding: `${PADDING}px`,
