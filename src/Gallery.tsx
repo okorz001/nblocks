@@ -1,6 +1,5 @@
 import { ArrowBack, ArrowForward, Transform as TransformIcon } from '@mui/icons-material'
 import { Box, Divider, IconButton, Stack, Tooltip, useMediaQuery } from '@mui/material'
-import { SxProps } from '@mui/system'
 import { useState } from 'react'
 import NBLOCKS from './blocks'
 import { ifDarkMode } from './DarkMode'
@@ -8,9 +7,7 @@ import SvgCanvas from './SvgCanvas'
 
 const PADDING = 20
 
-export default function Gallery(props: {
-  sx?: SxProps
-}) {
+export default function Gallery() {
   const [blockNumber, setBlockNumber] = useState(0)
   const [formNumber, setFormNumber] = useState(0)
   const nblock = NBLOCKS[blockNumber]
@@ -37,7 +34,10 @@ export default function Gallery(props: {
   return (
     <Box
       sx={{
-        ...props.sx,
+        // fill remaining space under topbar, but do not overflow
+        flex: 'auto',
+        minHeight: '0',
+
         // flex
         display: 'flex',
         flexFlow: `${isLandscape ? 'row' : 'column'} nowrap`,
@@ -78,7 +78,7 @@ export default function Gallery(props: {
           ...(isLandscape ? {
             mr: 2,
           } : {
-            mb: 2.5,
+            mb: 'max(16px, env(safe-area-inset-bottom))',
             px: 1.5,
           })
         }}

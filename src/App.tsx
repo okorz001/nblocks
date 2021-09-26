@@ -10,18 +10,13 @@ export default function App() {
       <DarkMode>
         <CssBaseline />
         <Box sx={{
-          // fullscreen
-          width: '100vw',
-          height: '100vh',
+          width: '100%',
+          height: '100%',
           display: 'flex',
           flexFlow: 'column nowrap',
         }}>
           <TopBar />
-          <Gallery sx={{
-            // fill remaining space under topbar, but do not overflow
-            flex: 'auto',
-            minHeight: '0',
-          }} />
+          <Gallery />
         </Box>
       </DarkMode>
     </ServiceWorker>

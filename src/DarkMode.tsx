@@ -67,6 +67,16 @@ export default function DarkMode(props: {
       palette: {
         mode: darkMode ? 'dark' : 'light',
       },
+      components: {
+        MuiCssBaseline: {
+          styleOverrides: {
+            // fullscreen
+            'html, body, #app': {
+              height: '100%',
+            },
+          },
+        },
+      },
     }),
     [darkMode]
   )
