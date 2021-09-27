@@ -11,7 +11,7 @@ export default function App() {
         <CssBaseline />
         <Box sx={{
           width: '100%',
-          height: '100%',
+          height: 'calc(100% + env(safe-area-inset-top))',
           // 280px is Galaxy Fold width
           // 320px is iPhone 5 width
           minWidth: '280px',
