@@ -29,10 +29,12 @@ export default function Gallery() {
   // we only want to use landscape layout if the height is too small for regular layout
   // (orientation: landscape) can be true with huge viewports which is not desirable
   // this is a heuristic for a rotated phone -- 480px is a rough upper bound for mobile phone width
+  // 428px is iPhone 12 Pro Max width
   const isLandscape = useMediaQuery('(max-height: 480px) and (min-width: 480px)')
 
   return (
     <Box
+      component="main"
       sx={{
         // fill remaining space under topbar, but do not overflow
         flex: 'auto',
@@ -49,19 +51,24 @@ export default function Gallery() {
       <Box
         sx={{
           flex: 'auto',
+          // prevent overflow
+          minWidth: '0px',
           minHeight: '0px',
-          maxWidth: '500px',
-          height: `calc(100% - ${2 * PADDING}px)`,
-          padding: `${PADDING}px`,
+          padding: 2,
 
           display: 'flex',
           flexFlow: 'row nowrap',
           alignItems: 'center',
           justifyContent: 'center',
           ...(isLandscape ? {
+            // flex cross axis
+            height: '100%',
             // keep content centered despite controls on the right side
             ml: 8,
-          } : {})
+          } : {
+            // flex cross axis
+            width: '100%',
+          })
         }}
       >
         <SvgCanvas scale={0.5} width={form.width} height={form.height}>

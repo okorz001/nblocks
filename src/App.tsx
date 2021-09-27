@@ -12,8 +12,20 @@ export default function App() {
         <Box sx={{
           width: '100%',
           height: '100%',
+          // 280px is Galaxy Fold width
+          // 320px is iPhone 5 width
+          minWidth: '280px',
+          minHeight: '280px',
+
+          backgroundImage: 'url(/assets/background.svg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center bottom',
+
           display: 'flex',
           flexFlow: 'column nowrap',
+
+          // disable text selection
+          userSelect: 'none',
         }}>
           <TopBar />
           <Gallery />

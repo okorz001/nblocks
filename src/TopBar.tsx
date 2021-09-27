@@ -7,7 +7,7 @@ import { ServiceWorkerContext } from './ServiceWorker'
 export default function TopBar() {
   return (
     <AppBar position="sticky">
-      <Toolbar>
+      <Toolbar variant="dense">
         <DropMenu icon={<FilterList />}>
           <MenuItem>All</MenuItem>
           <Divider />
@@ -28,8 +28,8 @@ export default function TopBar() {
         <Typography
           variant="h6"
           sx={{
-            mx: 2,
             flex: 'auto',
+            px: 2,
           }}
         >
           NBlocks
