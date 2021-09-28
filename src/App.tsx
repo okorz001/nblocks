@@ -1,13 +1,13 @@
 import { Box, CssBaseline } from '@mui/material'
-import DarkMode from './DarkMode'
+import { DarkModeProvider } from './DarkMode'
 import Gallery from './Gallery'
-import ServiceWorker from './ServiceWorker'
+import { ServiceWorkerProvider } from './ServiceWorker'
 import TopBar from './TopBar'
 
 export default function App() {
   return (
-    <ServiceWorker script="/service-worker.js">
-      <DarkMode>
+    <ServiceWorkerProvider script="/service-worker.js">
+      <DarkModeProvider>
         <CssBaseline />
         <Box sx={{
           width: '100%',
@@ -30,7 +30,7 @@ export default function App() {
           <TopBar />
           <Gallery />
         </Box>
-      </DarkMode>
-    </ServiceWorker>
+      </DarkModeProvider>
+    </ServiceWorkerProvider>
   )
 }

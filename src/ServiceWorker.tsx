@@ -1,22 +1,37 @@
-import { createContext, useEffect, useState } from 'react'
+import { createContext, useContext, useEffect, useState } from 'react'
 
-export const ServiceWorkerContext = createContext<ServiceWorkerRegistration>(null)
+/**
+ * A service worker.
+ */
+export interface ServiceWorkerContext {
+  /**
+   * The service worker registration for the provided script.
+   */
+  registration?: ServiceWorkerRegistration
+}
 
-export default function ServiceWorker(props: {
+const CONTEXT = createContext<ServiceWorkerContext>(null)
+
+/**
+ * This component registers a service worker and exposes it to any child components.
+ * @param props.script The script to load the service worker from.
+ * @param props.children The component(s) to render with access to the service worker.
+ */
+export function ServiceWorkerProvider(props: {
   script: string,
-  children: React.ReactNode,
+  children?: React.ReactNode,
 }) {
-  const [reg, setReg] = useState<ServiceWorkerRegistration>(null)
+  const [registration, setRegistration] = useState<ServiceWorkerRegistration>(null)
 
   // register service worker on first render only
   useEffect(() => {
     if ('serviceWorker' in navigator) {
       (async () => {
-        const reg = await navigator.serviceWorker.register(props.script)
+        const registration = await navigator.serviceWorker.register(props.script)
 
         // trigger refresh when new service worker is activated
-        reg.addEventListener('updatefound', () => {
-          const newWorker = reg.installing
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing
           newWorker.addEventListener('statechange', () => {
             if (newWorker.state === 'activated') {
               console.log('new worker activated')
@@ -25,7 +40,7 @@ export default function ServiceWorker(props: {
           })
         })
 
-        setReg(reg)
+        setRegistration(registration)
       })()
     } else {
       console.log('worker not supported')
@@ -33,8 +48,20 @@ export default function ServiceWorker(props: {
   }, [])
 
   return (
-    <ServiceWorkerContext.Provider value={reg}>
+    <CONTEXT.Provider value={{ registration }}>
       {props.children}
-    </ServiceWorkerContext.Provider>
+    </CONTEXT.Provider>
   )
+}
+
+/**
+ * A React hook for the service worker.
+ * @returns The service worker
+ */
+export function useServiceWorker(): ServiceWorkerContext {
+  const context = useContext(CONTEXT)
+  if (!context) {
+    throw new Error('useServiceWorker requires a <ServiceWorkerProvider> ancestor')
+  }
+  return context
 }

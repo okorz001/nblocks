@@ -1,49 +1,9 @@
 import { createTheme, ThemeProvider } from '@mui/material'
 import { Theme } from '@mui/system'
-import { createContext, useMemo, useState } from 'react'
+import { createContext, useContext, useEffect, useMemo, useState } from 'react'
 
 /**
- * Local storage key for dark mode setting.
- */
-const DARK_MODE_KEY = 'darkMode'
-
-/**
- * Load dark mode setting from local storage. Falls back to CSS media query if setting has never been set.
- * @returns Saved dark mode setting.
- */
-function loadDarkMode(): boolean {
-  const darkMode = window.localStorage.getItem(DARK_MODE_KEY)
-  if (darkMode === "true") {
-    return true
-  } else if (darkMode === "false") {
-    return false
-  } else if (darkMode !== null) {
-    console.warn("unknown dark mode: " + darkMode)
-  }
-  return window.matchMedia('(prefers-color-scheme: dark)').matches
-}
-
-/**
- * Saves the dark mode setting to local storage.
- * @param darkMode The current dark mode setting.
- */
-function saveDarkMode(darkMode: boolean) {
-  window.localStorage.setItem(DARK_MODE_KEY, darkMode ? "true" : "false")
-}
-
-/**
- * React context containing the dark mode state and a function to enable/disable dark mode.
- */
-export const DarkModeContext = createContext<{
-  darkMode: boolean,
-  setDarkMode: (darkMode: boolean) => void,
-}>({
-  darkMode: false,
-  setDarkMode: () => {},
-})
-
-/**
- * Convenience method for specifying a different style when dark mode is active.
+ * Convenience method for specifying a different style in SX props when dark mode is active.
  * @param dark The value to use during dark mode.
  * @param light The value to use during light mode (default mode).
  * @returns A function for use in a MUI sx prop.
@@ -53,13 +13,34 @@ export function ifDarkMode<T, U>(dark: T, light: U): (theme: Theme) => T | U {
 }
 
 /**
- * This component adds dark mode support to child components.
+ * The dark mode state and a function to enable/disable dark mode.
+ */
+export interface DarkModeContext {
+  /**
+   * Whether dark mode is currently active.
+   */
+  darkMode: boolean,
+
+  /**
+   * Enables (or disables) dark mode.
+   * @param darkMode Enable dark mode?
+   */
+  setDarkMode: (darkMode: boolean) => void,
+}
+
+const CONTEXT = createContext<DarkModeContext>(null)
+
+/**
+ * This component defines a MUI theme with dark mode support for child components.
  * @param props.children The component(s) to render with the theme.
  */
-export default function DarkMode(props: {
+export function DarkModeProvider(props: {
   children: React.ReactNode,
 }) {
   const [darkMode, setDarkMode] = useState(loadDarkMode)
+
+  // persist dark mode setting
+  useEffect(() => saveDarkMode(darkMode), [darkMode])
 
   // cache light and dark themes
   const theme = useMemo(
@@ -81,21 +62,42 @@ export default function DarkMode(props: {
     [darkMode]
   )
 
-  const context = {
-    darkMode,
-    setDarkMode: (darkMode: boolean) => {
-      // update react state
-      setDarkMode(darkMode)
-      // update local storage
-      saveDarkMode(darkMode)
-    },
-  }
-
   return (
     <ThemeProvider theme={theme}>
-      <DarkModeContext.Provider value={context}>
+      <CONTEXT.Provider value={{ darkMode, setDarkMode }}>
         {props.children}
-      </DarkModeContext.Provider>
+      </CONTEXT.Provider>
     </ThemeProvider>
   )
+}
+
+/**
+ * A React hook for the current dark mode state.
+ * @returns The dark mode context.
+ */
+export function useDarkMode(): DarkModeContext {
+  const context = useContext(CONTEXT)
+  if (!context) {
+    throw new Error('useDarkMode requires a <DarkModeProvider> ancestor')
+  }
+  return context
+}
+
+const DARK_MODE_KEY = 'darkMode'
+
+function loadDarkMode(): boolean {
+  const darkMode = window.localStorage.getItem(DARK_MODE_KEY)
+  if (darkMode === "true") {
+    return true
+  } else if (darkMode === "false") {
+    return false
+  } else if (darkMode !== null) {
+    console.warn("unknown dark mode: " + darkMode)
+  }
+  // fallback to CSS media query
+  return window.matchMedia('(prefers-color-scheme: dark)').matches
+}
+
+function saveDarkMode(darkMode: boolean) {
+  window.localStorage.setItem(DARK_MODE_KEY, darkMode ? "true" : "false")
 }

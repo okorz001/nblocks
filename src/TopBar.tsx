@@ -1,10 +1,12 @@
 import { Brightness4, FilterList, Settings, Update } from '@mui/icons-material'
 import { AppBar, Divider, ListItemIcon, ListItemText, MenuItem, Switch, Toolbar, Typography } from "@mui/material"
-import { DarkModeContext } from './DarkMode'
+import { useDarkMode } from './DarkMode'
 import DropMenu from './DropMenu'
-import { ServiceWorkerContext } from './ServiceWorker'
+import { useServiceWorker } from './ServiceWorker'
 
 export default function TopBar() {
+  const { darkMode, setDarkMode } = useDarkMode()
+  const { registration } = useServiceWorker()
   return (
     <AppBar position="sticky">
       <Toolbar variant="dense" sx={{ pt: 'env(safe-area-inset-top)' }}>
@@ -30,30 +32,22 @@ export default function TopBar() {
         </Typography>
 
         <DropMenu icon={<Settings />}>
-          <DarkModeContext.Consumer>
-            {({darkMode, setDarkMode}) => (
-              <MenuItem onClick={() => setDarkMode(!darkMode)}>
-                <ListItemIcon>
-                  <Brightness4 />
-                </ListItemIcon>
-                <ListItemText>Dark Mode</ListItemText>
-                <Switch checked={darkMode} />
-              </MenuItem>
-            )}
-          </DarkModeContext.Consumer>
+          <MenuItem onClick={() => setDarkMode(!darkMode)}>
+            <ListItemIcon>
+              <Brightness4 />
+            </ListItemIcon>
+            <ListItemText>Dark Mode</ListItemText>
+            <Switch checked={darkMode} />
+          </MenuItem>
 
           <Divider />
 
-          <ServiceWorkerContext.Consumer>
-            {(reg) => (
-              <MenuItem disabled={!reg} onClick={() => reg.update()}>
-                <ListItemIcon>
-                  <Update />
-                </ListItemIcon>
-                <ListItemText>Check for Updates</ListItemText>
-              </MenuItem>
-            )}
-          </ServiceWorkerContext.Consumer>
+          <MenuItem disabled={!registration} onClick={() => registration.update()}>
+            <ListItemIcon>
+              <Update />
+            </ListItemIcon>
+            <ListItemText>Check for Updates</ListItemText>
+          </MenuItem>
         </DropMenu>
       </Toolbar>
     </AppBar>
