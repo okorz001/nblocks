@@ -1,7 +1,7 @@
 import { Box, CssBaseline } from '@mui/material'
 import { useReducer } from 'react'
 import { getNBlocks, NBlock } from './blocks'
-import { DarkModeProvider } from './DarkMode'
+import { DarkModeProvider, ifDarkMode } from './DarkMode'
 import Gallery from './Gallery'
 import { ServiceWorkerProvider } from './ServiceWorker'
 import TopBar from './TopBar'
@@ -66,7 +66,7 @@ export default function App() {
           minWidth: '280px',
           minHeight: '280px',
 
-          backgroundImage: 'url(/assets/background.svg)',
+          backgroundImage: ifDarkMode('url(/assets/background-dark.svg)', 'url(/assets/background.svg)'),
           backgroundSize: 'cover',
           backgroundPosition: 'center bottom',
 
