@@ -21,6 +21,7 @@ export const NINETY: NBlock = {
   forms: [
     // 9x10
     {
+      tags: ['x10'],
       width: 900,
       height: 1000,
       svg: () => (

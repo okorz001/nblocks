@@ -11,6 +11,7 @@ export const ONE: NBlock = {
   number: 1,
   forms: [
     {
+      tags: ['square', 'step', 'odd', '1x', 'x1'],
       width: 100,
       height: 100,
       svg: () => (

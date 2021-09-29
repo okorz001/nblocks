@@ -7,6 +7,7 @@ export const FIFTEEN: NBlock = {
   forms: [
     // step
     {
+      tags: ['step'],
       width: 500,
       height: 500,
       svg: () => (
@@ -21,6 +22,7 @@ export const FIFTEEN: NBlock = {
     },
     // 3x5
     {
+      tags: ['3x', 'x5'],
       width: 300,
       height: 500,
       svg: () => (
@@ -32,6 +34,7 @@ export const FIFTEEN: NBlock = {
     },
     // odd
     {
+      tags: ['odd'],
       width: 200,
       height: 800,
       svg: () => (
@@ -39,6 +42,18 @@ export const FIFTEEN: NBlock = {
           <FiveBlock x={100} />
           <FiveGrid y={100} width={2} height={2} />
           <TenGrid y={300} width={2} height={5} />
+        </svg>
+      ),
+    },
+    // 5x3
+    {
+      tags: ['5x', 'x3'],
+      width: 500,
+      height: 300,
+      svg: () => (
+        <svg>
+          <FiveGrid width={5} />
+          <TenGrid y={100} width={5} height={2} />
         </svg>
       ),
     },

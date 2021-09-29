@@ -25,6 +25,7 @@ export const ONE_HUNDRED: NBlock = {
   forms: [
     // square
     {
+      tags: ['square', '10x', 'x10'],
       width: 1000,
       height: 1000,
       svg: () => (

@@ -7,12 +7,25 @@ export const THIRTY_TWO: NBlock = {
   forms: [
     // 4x8
     {
+      tags: ['4x'],
       width: 400,
       height: 800,
       svg: () => (
         <svg>
           <ThirtyGrid width={4} height={8} />
           <TwoGrid x={100} y={100} width={2} />
+        </svg>
+      ),
+    },
+    // 8x4
+    {
+      tags: ['x4'],
+      width: 800,
+      height: 400,
+      svg: () => (
+        <svg>
+          <ThirtyGrid width={8} height={4} />
+          <TwoGrid x={600} y={100} height={2} />
         </svg>
       ),
     },

@@ -7,6 +7,7 @@ export const FIFTY_FIVE: NBlock = {
   forms: [
     // step
     {
+      tags: ['step'],
       width: 1000,
       height: 1000,
       svg: () => (

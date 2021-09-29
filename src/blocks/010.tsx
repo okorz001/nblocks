@@ -13,6 +13,7 @@ export const TEN: NBlock = {
   forms: [
     // tall
     {
+      tags: ['1x', 'x10'],
       width: 100,
       height: 1000,
       svg: () => (
@@ -23,6 +24,7 @@ export const TEN: NBlock = {
     },
     // even
     {
+      tags: ['even', '2x', 'x5'],
       width: 200,
       height: 500,
       svg: () => (
@@ -33,6 +35,7 @@ export const TEN: NBlock = {
     },
     // step
     {
+      tags: ['step'],
       width: 400,
       height: 400,
       svg: () => (
@@ -41,6 +44,28 @@ export const TEN: NBlock = {
           <TenGrid x={100} y={200} height={2} />
           <TenGrid x={200} y={100} height={3} />
           <TenGrid x={300} height={4} />
+        </svg>
+      ),
+    },
+    // 5x2
+    {
+      tags: ['5x', 'x2'],
+      width: 500,
+      height: 200,
+      svg: () => (
+        <svg>
+          <TenGrid width={5} height={2} />
+        </svg>
+      ),
+    },
+    // wide
+    {
+      tags: ['10x', 'x1'],
+      width: 1000,
+      height: 100,
+      svg: () => (
+        <svg>
+          <TenGrid width={10} />
         </svg>
       ),
     },

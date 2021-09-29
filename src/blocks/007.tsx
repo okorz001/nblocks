@@ -18,6 +18,7 @@ export const SEVEN: NBlock = {
   forms: [
     // tall
     {
+      tags: ['1x', 'x7'],
       width: 100,
       height: 700,
       svg: () => (
@@ -34,6 +35,7 @@ export const SEVEN: NBlock = {
     },
     // odd
     {
+      tags: ['odd'],
       width: 200,
       height: 400,
       svg: () => (
@@ -45,6 +47,23 @@ export const SEVEN: NBlock = {
           <SixBlock x={100} y={100} />
           <FourBlock x={100} y={200} />
           <TwoBlock x={100} y={300} />
+        </svg>
+      ),
+    },
+    // wide
+    {
+      tags: ['7x', 'x1'],
+      width: 700,
+      height: 100,
+      svg: () => (
+        <svg>
+          <OneBlock />
+          <TwoBlock x={100} />
+          <ThreeBlock x={200} />
+          <FourBlock x={300} />
+          <FiveBlock x={400} />
+          <SixBlock x={500} />
+          <SevenBlock x={600} />
         </svg>
       ),
     },

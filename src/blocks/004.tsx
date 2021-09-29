@@ -13,6 +13,7 @@ export const FOUR: NBlock = {
   forms: [
     // square
     {
+      tags: ['square', 'even', '2x', 'x2'],
       width: 200,
       height: 200,
       svg: () => (
@@ -23,11 +24,23 @@ export const FOUR: NBlock = {
     },
     // tall
     {
+      tags: ['1x', 'x4'],
       width: 100,
       height: 400,
       svg: () => (
         <svg>
         <FourGrid height={4} />
+        </svg>
+      ),
+    },
+    // flat
+    {
+      tags: ['4x', 'x1'],
+      width: 400,
+      height: 100,
+      svg: () => (
+        <svg>
+        <FourGrid width={4} />
         </svg>
       ),
     },
@@ -61,16 +74,6 @@ export const FOUR: NBlock = {
         <svg>
           <FourGrid height={2} />
           <FourGrid x={100} y={100} height={2} />
-        </svg>
-      ),
-    },
-    // flat
-    {
-      width: 400,
-      height: 100,
-      svg: () => (
-        <svg>
-        <FourGrid width={4} />
         </svg>
       ),
     },

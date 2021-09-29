@@ -7,6 +7,7 @@ export const THIRTY_SIX: NBlock = {
   forms: [
     // square
     {
+      tags: ['square'],
       width: 600,
       height: 600,
       svg: () => (
@@ -18,6 +19,7 @@ export const THIRTY_SIX: NBlock = {
     },
     // step
     {
+      tags: ['step'],
       width: 800,
       height: 800,
       svg: () => (
@@ -33,19 +35,9 @@ export const THIRTY_SIX: NBlock = {
         </svg>
       ),
     },
-    // composite
-    {
-      width: 400,
-      height: 1000,
-      svg: () => (
-        <svg>
-          <ThirtyGrid width={3} height={10} />
-          <SixGrid x={300} y={400} height={6} />
-        </svg>
-      ),
-    },
     // 4x9
     {
+      tags: ['4x'],
       width: 400,
       height: 900,
       svg: () => (
@@ -59,12 +51,24 @@ export const THIRTY_SIX: NBlock = {
     },
     // 9x4
     {
+      tags: ['x4'],
       width: 900,
       height: 400,
       svg: () => (
         <svg>
           <ThirtyGrid width={9} height={4} />
           <SixGrid x={300} width={3} height={2} />
+        </svg>
+      ),
+    },
+    // composite
+    {
+      width: 400,
+      height: 1000,
+      svg: () => (
+        <svg>
+          <ThirtyGrid width={3} height={10} />
+          <SixGrid x={300} y={400} height={6} />
         </svg>
       ),
     },

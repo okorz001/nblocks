@@ -7,6 +7,7 @@ export const TWENTY_FOUR: NBlock = {
   forms: [
     // 3x8
     {
+      tags: ['3x'],
       width: 300,
       height: 800,
       svg: () => (
@@ -29,12 +30,37 @@ export const TWENTY_FOUR: NBlock = {
     },
     // 4x6
     {
+      tags: ['4x'],
       width: 400,
       height: 600,
       svg: () => (
         <svg>
           <FourGrid width={4} />
-          <TwentyGrid y={100} width={4} height={10} />
+          <TwentyGrid y={100} width={4} height={5} />
+        </svg>
+      ),
+    },
+    // 6x4
+    {
+      tags: ['x4'],
+      width: 600,
+      height: 400,
+      svg: () => (
+        <svg>
+          <TwentyGrid width={5} height={4} />
+          <FourGrid x={500} height={4} />
+        </svg>
+      ),
+    },
+    // 8x3
+    {
+      tags: ['x3'],
+      width: 800,
+      height: 300,
+      svg: () => (
+        <svg>
+          <TwentyGrid width={8} height={3} />
+          <FourGrid x={200} y={100} width={4} />
         </svg>
       ),
     },

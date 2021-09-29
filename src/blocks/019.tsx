@@ -21,6 +21,7 @@ export const NINETEEN: NBlock = {
     },
     // odd
     {
+      tags: ['odd'],
       width: 200,
       height: 1000,
       svg: () => (

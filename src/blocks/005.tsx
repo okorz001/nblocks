@@ -13,6 +13,7 @@ export const FIVE: NBlock = {
   forms: [
     // tall
     {
+      tags: ['1x', 'x5'],
       width: 100,
       height: 500,
       svg: () => (
@@ -23,12 +24,24 @@ export const FIVE: NBlock = {
     },
     // odd
     {
+      tags: ['odd'],
       width: 200,
       height: 300,
       svg: () => (
         <svg>
           <FiveBlock x={100} />
           <FiveGrid y={100} width={2} height={2} />
+        </svg>
+      ),
+    },
+    // wide
+    {
+      tags: ['5x', 'x1'],
+      width: 500,
+      height: 100,
+      svg: () => (
+        <svg>
+          <FiveGrid width={5} />
         </svg>
       ),
     },

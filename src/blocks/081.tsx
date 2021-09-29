@@ -7,6 +7,7 @@ export const EIGHTY_ONE: NBlock = {
   forms: [
     // square
     {
+      tags: ['square'],
       width: 900,
       height: 900,
       svg: () => (

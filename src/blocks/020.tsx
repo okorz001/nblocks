@@ -11,8 +11,9 @@ export const TwentyGrid = createGrid('Twenty', TwentyBlock)
 export const TWENTY: NBlock = {
   number: 20,
   forms: [
-    // 2x10
+    // even
     {
+      tags: ['even', '2x', 'x10'],
       width: 200,
       height: 1000,
       svg: () => (
@@ -21,13 +22,36 @@ export const TWENTY: NBlock = {
         </svg>
       ),
     },
+    // 4x5
+    {
+      tags: ['4x', 'x5'],
+      width: 400,
+      height: 500,
+      svg: () => (
+        <svg>
+          <TwentyGrid width={4} height={5} />
+        </svg>
+      ),
+    },
     // 5x4
     {
+      tags: ['5x', 'x4'],
       width: 500,
       height: 400,
       svg: () => (
         <svg>
           <TwentyGrid width={5} height={4} />
+        </svg>
+      ),
+    },
+    // 10x2
+    {
+      tags: ['10x', 'x2'],
+      width: 1000,
+      height: 200,
+      svg: () => (
+        <svg>
+          <TwentyGrid width={10} height={2} />
         </svg>
       ),
     },

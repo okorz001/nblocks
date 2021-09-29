@@ -13,6 +13,7 @@ export const TWO: NBlock = {
   forms: [
     // tall
     {
+      tags: ['1x', 'x2'],
       width: 100,
       height: 200,
       svg: () => (
@@ -23,6 +24,7 @@ export const TWO: NBlock = {
     },
     // even
     {
+      tags: ['even', '2x', 'x1'],
       width: 200,
       height: 100,
       svg: () => (

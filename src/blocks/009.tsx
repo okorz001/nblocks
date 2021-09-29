@@ -21,6 +21,7 @@ export const NINE: NBlock = {
   forms: [
     // square
     {
+      tags: ['square', '3x', 'x3'],
       width: 300,
       height: 300,
       svg: () => (
@@ -33,6 +34,7 @@ export const NINE: NBlock = {
     },
     // tall
     {
+      tags: ['1x'],
       width: 100,
       height: 900,
       svg: () => (
@@ -45,6 +47,7 @@ export const NINE: NBlock = {
     },
     // odd
     {
+      tags: ['odd'],
       width: 200,
       height: 500,
       svg: () => (
@@ -55,6 +58,19 @@ export const NINE: NBlock = {
           <NineLightBlock y={300} />
           <NineMediumBlock x={100} y={300} />
           <NineLightGrid y={400} width={2} />
+        </svg>
+      ),
+    },
+    // wide
+    {
+      tags: ['x1'],
+      width: 900,
+      height: 100,
+      svg: () => (
+        <svg>
+          <NineLightGrid width={3} />
+          <NineMediumGrid x={300} width={3} />
+          <NineDarkGrid x={600} width={3} />
         </svg>
       ),
     },

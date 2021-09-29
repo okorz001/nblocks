@@ -13,6 +13,7 @@ export const EIGHT: NBlock = {
   forms: [
     // even
     {
+      tags: ['even', '2x', 'x4'],
       width: 200,
       height: 400,
       svg: () => (
@@ -23,11 +24,34 @@ export const EIGHT: NBlock = {
     },
     // tall
     {
+      tags: ['1x'],
       width: 100,
       height: 800,
       svg: () => (
         <svg>
           <EightGrid height={8} />
+        </svg>
+      ),
+    },
+    // 4x2
+    {
+      tags: ['4x', 'x2'],
+      width: 400,
+      height: 200,
+      svg: () => (
+        <svg>
+          <EightGrid width={4} height={2} />
+        </svg>
+      ),
+    },
+    // wide
+    {
+      tags: ['x1'],
+      width: 800,
+      height: 100,
+      svg: () => (
+        <svg>
+          <EightGrid width={8} />
         </svg>
       ),
     },

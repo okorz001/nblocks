@@ -13,11 +13,23 @@ export const FIFTY: NBlock = {
   forms: [
     // 5x10
     {
+      tags: ['5x', 'x10'],
       width: 500,
       height: 1000,
       svg: () => (
         <svg>
           <FiftyGrid width={5} height={10} />
+        </svg>
+      ),
+    },
+    // 10x5
+    {
+      tags: ['10x', 'x5'],
+      width: 1000,
+      height: 500,
+      svg: () => (
+        <svg>
+          <FiftyGrid width={10} height={5} />
         </svg>
       ),
     },

@@ -13,6 +13,7 @@ export const EIGHTY: NBlock = {
   forms: [
     // 8x10
     {
+      tags: ['x10'],
       width: 800,
       height: 1000,
       svg: () => (

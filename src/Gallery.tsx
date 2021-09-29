@@ -1,30 +1,28 @@
 import { ArrowBack, ArrowForward, Transform as TransformIcon } from '@mui/icons-material'
 import { Box, Divider, IconButton, Stack, Tooltip, useMediaQuery } from '@mui/material'
-import { useState } from 'react'
-import NBLOCKS from './blocks'
+import { NBlock } from './blocks'
 import { ifDarkMode } from './DarkMode'
 import SvgCanvas from './SvgCanvas'
 
-const PADDING = 20
-
-export default function Gallery() {
-  const [blockNumber, setBlockNumber] = useState(0)
-  const [formNumber, setFormNumber] = useState(0)
-  const nblock = NBLOCKS[blockNumber]
+export default function Gallery(props: {
+  blocks: NBlock[],
+  block: number,
+  setBlock: (block: number) => void,
+  form: number,
+  setForm: (form: number) => void,
+}) {
+  const nblock = props.blocks[props.block]
   const forms = nblock.forms
-  const form = forms[formNumber]
+  const form = forms[props.form]
 
-  // reset form when changing blocks
   const previousBlock = () => {
-    setBlockNumber(blockNumber - 1)
-    setFormNumber(0)
+    props.setBlock(props.block - 1)
   }
   const nextBlock = () => {
-    setBlockNumber(blockNumber + 1)
-    setFormNumber(0)
+    props.setBlock(props.block + 1)
   }
-  // wrap around after reaching end of list
-  const nextForm = () => setFormNumber((formNumber + 1) % forms.length)
+  // wrap around from last form
+  const nextForm = () => props.setForm((props.form + 1) % forms.length)
 
   // we only want to use landscape layout if the height is too small for regular layout
   // (orientation: landscape) can be true with huge viewports which is not desirable
@@ -93,7 +91,7 @@ export default function Gallery() {
         divider={<Divider orientation={isLandscape? "horizontal" : "vertical"} flexItem />}
       >
         <Tooltip title="Previous">
-          <IconButton size="large" color="inherit" onClick={previousBlock} disabled={blockNumber == 0}>
+          <IconButton size="large" color="inherit" onClick={previousBlock} disabled={props.block == 0}>
             <ArrowBack />
           </IconButton>
         </Tooltip>
@@ -105,7 +103,7 @@ export default function Gallery() {
         </Tooltip>
 
         <Tooltip title="Next">
-          <IconButton size="large" color="inherit" onClick={nextBlock} disabled={blockNumber == NBLOCKS.length - 1}>
+          <IconButton size="large" color="inherit" onClick={nextBlock} disabled={props.block == props.blocks.length - 1}>
             <ArrowForward />
           </IconButton>
         </Tooltip>

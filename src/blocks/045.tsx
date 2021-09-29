@@ -7,6 +7,7 @@ export const FORTY_FIVE: NBlock = {
   forms: [
     // step
     {
+      tags: ['step'],
       width: 900,
       height: 900,
       svg: () => (
@@ -26,12 +27,25 @@ export const FORTY_FIVE: NBlock = {
     },
     // 5x9
     {
+      tags: ['5x'],
       width: 500,
       height: 900,
       svg: () => (
         <svg>
           <FiveGrid width={5} />
           <FortyGrid y={100} width={5} height={8} />
+        </svg>
+      ),
+    },
+    // 9x5
+    {
+      tags: ['x5'],
+      width: 900,
+      height: 500,
+      svg: () => (
+        <svg>
+          <FortyGrid width={8} height={5} />
+          <FiveGrid x={800} height={5} />
         </svg>
       ),
     },

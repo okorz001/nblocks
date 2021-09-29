@@ -13,6 +13,7 @@ export const SIX: NBlock = {
   forms: [
     // even
     {
+      tags: ['even', '2x', 'x3'],
       width: 200,
       height: 300,
       svg: () => (
@@ -23,6 +24,7 @@ export const SIX: NBlock = {
     },
     // tall
     {
+      tags: ['1x', 'x6'],
       width: 100,
       height: 600,
       svg: () => (
@@ -33,6 +35,7 @@ export const SIX: NBlock = {
     },
     // step
     {
+      tags: ['step'],
       width: 300,
       height: 300,
       svg: () => (
@@ -40,6 +43,28 @@ export const SIX: NBlock = {
           <SixBlock y={200} />
           <SixGrid x={100} y={100} height={2} />
           <SixGrid x={200} height={3} />
+        </svg>
+      ),
+    },
+    // 3x2
+    {
+      tags: ['3x', 'x2'],
+      width: 300,
+      height: 200,
+      svg: () => (
+        <svg>
+          <SixGrid width={3} height={2} />
+        </svg>
+      ),
+    },
+    // wide
+    {
+      tags: ['6x', 'x1'],
+      width: 600,
+      height: 100,
+      svg: () => (
+        <svg>
+          <SixGrid width={6} />
         </svg>
       ),
     },

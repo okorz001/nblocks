@@ -24,14 +24,27 @@ export const TWENTY_EIGHT: NBlock = {
         </svg>
       ),
     },
-    // 4 x 7
+    // 4x7
     {
+      tags: ['4x'],
       width: 400,
       height: 700,
       svg: () => (
         <svg>
           <EightGrid width={4} height={2} />
           <TwentyGrid y={200} width={4} height={5} />
+        </svg>
+      ),
+    },
+    // 7x4
+    {
+      tags: ['x4'],
+      width: 700,
+      height: 400,
+      svg: () => (
+        <svg>
+          <TwentyGrid width={5} height={4} />
+          <EightGrid x={500} width={2} height={4} />
         </svg>
       ),
     },
@@ -59,6 +72,7 @@ export const TWENTY_EIGHT: NBlock = {
     },
     // step
     {
+      tags: ['step'],
       width: 700,
       height: 700,
       svg: () => (

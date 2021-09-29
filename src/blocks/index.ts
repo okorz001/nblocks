@@ -47,7 +47,9 @@ import EIGHTY_ONE from './081'
 import NINETY from './090'
 import ONE_HUNDRED from './100'
 
-export const NBLOCKS: NBlock[] = [
+export type { NBlock }
+
+const NBLOCKS: NBlock[] = [
   ONE,
   TWO,
   THREE,
@@ -96,4 +98,38 @@ export const NBLOCKS: NBlock[] = [
   ONE_HUNDRED,
 ]
 
-export default NBLOCKS
+const GROUP_TO_TAGS = new Map<string, string[]>()
+GROUP_TO_TAGS.set('squares', ['square'])
+GROUP_TO_TAGS.set('steps', ['step'])
+GROUP_TO_TAGS.set('evens', ['even'])
+GROUP_TO_TAGS.set('odds', ['odd'])
+// TODO: maybe the alternate tag should be removed for consistency/simplicity
+GROUP_TO_TAGS.set('ones', ['x1', '1x'])
+GROUP_TO_TAGS.set('twos', ['x2', '2x'])
+GROUP_TO_TAGS.set('threes', ['x3', '3x'])
+GROUP_TO_TAGS.set('fours', ['x4', '4x'])
+GROUP_TO_TAGS.set('fives', ['x5', '5x'])
+// the tens times table is not shown ten blocks wide...
+GROUP_TO_TAGS.set('tens', ['x10'])
+
+export function getNBlocks(group: string): NBlock[] {
+  const tags = GROUP_TO_TAGS.get(group)
+  if (!tags) {
+    return NBLOCKS
+  }
+  return NBLOCKS
+    .map(block => {
+      // find distinct forms for every tag
+      const forms = distinct(tags.map(tag => block.forms.find(form => form.tags && form.tags.includes(tag))).filter(Boolean))
+      return {
+        ...block,
+        forms,
+      }
+    })
+    // filter blocks with no matching forms
+    .filter(block => block.forms.length > 0)
+}
+
+function distinct<T>(xs: T[]): T[] {
+  return Array.from(new Set(xs))
+}

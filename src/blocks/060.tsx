@@ -13,6 +13,7 @@ export const SIXTY: NBlock = {
   forms: [
     // 6x10
     {
+      tags: ['x10'],
       width: 600,
       height: 1000,
       svg: () => (

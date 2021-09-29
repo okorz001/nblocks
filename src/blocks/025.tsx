@@ -7,6 +7,7 @@ export const TWENTY_FIVE: NBlock = {
   forms: [
     // square
     {
+      tags: ['square', '5x', 'x5'],
       width: 500,
       height: 500,
       svg: () => (

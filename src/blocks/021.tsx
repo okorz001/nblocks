@@ -7,6 +7,7 @@ export const TWENTY_ONE: NBlock = {
   forms: [
     // 3x7
     {
+      tags: ['3x'],
       width: 300,
       height: 700,
       svg: () => (
@@ -18,6 +19,7 @@ export const TWENTY_ONE: NBlock = {
     },
     // step
     {
+      tags: ['step'],
       width: 600,
       height: 600,
       svg: () => (
@@ -28,6 +30,18 @@ export const TWENTY_ONE: NBlock = {
           <TwentyGrid x={200} y={300} height={3} />
           <TwentyGrid x={100} y={400} height={2} />
           <TwentyBlock y={500} />
+        </svg>
+      ),
+    },
+    // 7x3
+    {
+      tags: ['x3'],
+      width: 700,
+      height: 300,
+      svg: () => (
+        <svg>
+          <TwentyGrid width={7} height={3} />
+          <OneBlock x={300} y={100} />
         </svg>
       ),
     },

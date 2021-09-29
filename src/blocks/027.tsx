@@ -13,6 +13,7 @@ export const TWENTY_SEVEN: NBlock = {
   forms: [
     // 3x9
     {
+      tags: ['3x'],
       width: 300,
       height: 900,
       svg: () => (
@@ -25,6 +26,24 @@ export const TWENTY_SEVEN: NBlock = {
           <ThreeBlock x={100} y={500} />
           <TwoBlock x={100} y={600} />
           <OneBlock x={100} y={700} />
+        </svg>
+      ),
+    },
+    // 3x9
+    {
+      tags: ['x3'],
+      width: 900,
+      height: 300,
+      svg: () => (
+        <svg>
+          <TwentyGrid width={9} height={3} />
+          <OneBlock x={100} y={100} />
+          <TwoBlock x={200} y={100} />
+          <ThreeBlock x={300} y={100} />
+          <FourBlock x={400} y={100} />
+          <FiveBlock x={500} y={100} />
+          <SixBlock x={600} y={100} />
+          <SevenBlock x={700} y={100} />
         </svg>
       ),
     },

@@ -7,6 +7,7 @@ export const SIXTEEN: NBlock = {
   forms: [
     // square
     {
+      tags: ['square', '4x', 'x4'],
       width: 400,
       height: 400,
       svg: () => (
@@ -19,12 +20,25 @@ export const SIXTEEN: NBlock = {
     },
     // even
     {
+      tags: ['even', '2x'],
       width: 200,
       height: 800,
       svg: () => (
         <svg>
           <SixGrid width={2} height={3} />
           <TenGrid y={300} width={2} height={5} />
+        </svg>
+      ),
+    },
+    // 8x2
+    {
+      tags: ['x2'],
+      width: 800,
+      height: 200,
+      svg: () => (
+        <svg>
+          <TenGrid width={5} height={2} />
+          <SixGrid x={500} width={3} height={2} />
         </svg>
       ),
     },

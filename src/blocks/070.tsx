@@ -23,6 +23,7 @@ export const SEVENTY: NBlock = {
   forms: [
     // 7x10
     {
+      tags: ['x10'],
       width: 700,
       height: 1000,
       svg: () => (

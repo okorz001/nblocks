@@ -13,6 +13,7 @@ export const THREE: NBlock = {
   forms: [
     // tall
     {
+      tags: ['1x', 'x3'],
       width: 100,
       height: 300,
       svg: () => (
@@ -23,6 +24,7 @@ export const THREE: NBlock = {
     },
     // odd
     {
+      tags: ['step', 'odd'],
       width: 200,
       height: 200,
       svg: () => (
@@ -34,6 +36,7 @@ export const THREE: NBlock = {
     },
     // flat
     {
+      tags: ['3x', 'x1'],
       width: 300,
       height: 100,
       svg: () => (

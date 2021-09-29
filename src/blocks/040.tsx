@@ -13,11 +13,45 @@ export const FORTY: NBlock = {
   forms: [
     // 4x10
     {
+      tags: ['4x', 'x10'],
       width: 400,
       height: 1000,
       svg: () => (
         <svg>
           <FortyGrid width={4} height={10} />
+        </svg>
+      ),
+    },
+    // 8x5
+    {
+      tags: ['5x'],
+      width: 500,
+      height: 800,
+      svg: () => (
+        <svg>
+          <FortyGrid width={5} height={8} />
+        </svg>
+      ),
+    },
+    // 8x5
+    {
+      tags: ['x5'],
+      width: 800,
+      height: 500,
+      svg: () => (
+        <svg>
+          <FortyGrid width={8} height={5} />
+        </svg>
+      ),
+    },
+    // 10x4
+    {
+      tags: ['10x', 'x4'],
+      width: 1000,
+      height: 400,
+      svg: () => (
+        <svg>
+          <FortyGrid width={10} height={4} />
         </svg>
       ),
     },
@@ -29,16 +63,6 @@ export const FORTY: NBlock = {
         <svg>
           <FortyGrid x={100} height={10} />
           <FortyGrid y={1000} width={3} height={10} />
-        </svg>
-      ),
-    },
-    // 8x5
-    {
-      width: 800,
-      height: 500,
-      svg: () => (
-        <svg>
-          <FortyGrid width={8} height={5} />
         </svg>
       ),
     },

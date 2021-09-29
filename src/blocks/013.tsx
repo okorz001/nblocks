@@ -42,6 +42,7 @@ export const THIRTEEN: NBlock = {
     },
     // odd
     {
+      tags: ['odd'],
       width: 200,
       height: 700,
       svg: () => (

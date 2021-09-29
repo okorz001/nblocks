@@ -7,12 +7,25 @@ export const FOURTEEN: NBlock = {
   forms: [
     // even
     {
+      tags: ['even', '2x'],
       width: 200,
       height: 700,
       svg: () => (
         <svg>
           <FourGrid width={2} height={2} />
           <TenGrid y={200} width={2} height={5} />
+        </svg>
+      ),
+    },
+    // 7x2
+    {
+      tags: ['x2'],
+      width: 700,
+      height: 200,
+      svg: () => (
+        <svg>
+          <TenGrid width={5} height={2} />
+          <FourGrid x={500} width={2} height={2} />
         </svg>
       ),
     },

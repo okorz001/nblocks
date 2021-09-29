@@ -7,6 +7,7 @@ export const ELEVEN: NBlock = {
   forms: [
     // odd
     {
+      tags: ['odd'],
       width: 200,
       height: 600,
       svg: () => (

@@ -1,10 +1,59 @@
 import { Box, CssBaseline } from '@mui/material'
+import { useReducer } from 'react'
+import { getNBlocks, NBlock } from './blocks'
 import { DarkModeProvider } from './DarkMode'
 import Gallery from './Gallery'
 import { ServiceWorkerProvider } from './ServiceWorker'
 import TopBar from './TopBar'
 
+export interface NBlocksState {
+  blocks: NBlock[],
+  group: string,
+  block: number,
+  form: number,
+}
+
+export type NBlocksAction = {
+  type: 'setGroup',
+  value: string,
+} | {
+  type: 'setBlock' | 'setForm',
+  value: number,
+}
+
+function initState(group: string) {
+  return {
+    blocks: getNBlocks(group),
+    group,
+    block: 0,
+    form: 0,
+  }
+}
+
+function reducer(state: NBlocksState, action: NBlocksAction): NBlocksState {
+  switch (action.type) {
+    case 'setGroup':
+      return initState(action.value)
+    case 'setBlock':
+      return {
+        ...state,
+        block: action.value,
+        form: 0,
+      }
+    case 'setForm':
+      return {
+        ...state,
+        form: action.value,
+      }
+  }
+}
+
 export default function App() {
+  const [state, dispatch] = useReducer(reducer, 'all', initState)
+  const setGroup = (value: string) => dispatch({ type: 'setGroup', value })
+  const setBlock = (value: number) => dispatch({ type: 'setBlock', value })
+  const setForm = (value: number) => dispatch({ type: 'setForm', value })
+
   return (
     <ServiceWorkerProvider script="/service-worker.js">
       <DarkModeProvider>
@@ -27,8 +76,14 @@ export default function App() {
           // disable text selection
           userSelect: 'none',
         }}>
-          <TopBar />
-          <Gallery />
+          <TopBar group={state.group} setGroup={setGroup} />
+          <Gallery
+            blocks={state.blocks}
+            block={state.block}
+            setBlock={setBlock}
+            form={state.form}
+            setForm={setForm}
+          />
         </Box>
       </DarkModeProvider>
     </ServiceWorkerProvider>
