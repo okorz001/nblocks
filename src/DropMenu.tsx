@@ -20,6 +20,7 @@ export default function DropMenu(props: {
       <Menu
         anchorEl={anchorEl}
         open={anchorEl !== null}
+        onClick={hideMenu}
         onClose={hideMenu}
         PaperProps={{
           sx: {
